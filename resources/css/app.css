@@ -1,0 +1,161 @@
+@import 'bootstrap';
+
+.container{
+    margin-top: 2%;
+}
+
+h3{
+    font-size: 28px;
+    font-weight: 650;
+}
+
+.row{
+    margin-top: 2%;
+}
+
+.container h3{
+    text-align: center;
+}
+
+.row h5{
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 18px;
+    font-weight: 700;
+}
+.row h4{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#fecha{
+    width: 50%;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 19px;
+    border-color: rgb(116, 224, 231);
+    border-radius: 40px;
+}
+
+#abajo{
+    margin-bottom: 1%;
+}
+
+#cuadro{
+    width: 100%;
+    padding: 6px 12px;
+    border: 0%;
+    border: none;
+    outline-color: rgb(196, 196, 255);
+
+}
+
+td{
+    padding: 0%;
+}
+
+#final{
+    display: inline-block;
+    position: absolute ;
+    right: 0;
+    top: 20px;
+    padding-right: 5px;
+    color: rgb(143, 143, 143);
+}
+
+/*ByJesusHilarioJuarezOrtiz*/
+
+#margen{
+    margin-top: 3%;
+}
+
+button{
+    margin-top: 2%;
+    margin-bottom: 7%;
+    width: 100%;
+}
+
+#mantenimiento{
+    margin-bottom: 3%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+#medio{
+    text-align: center;
+    margin-top: 2%;
+}
+
+/*Propiedades de sidemenu*/
+
+#boton{
+    margin-left: 2%;
+    width: 50px;
+    height: 50px;
+    margin-top: 1.5%;
+    position: absolute;
+    cursor: pointer;
+   
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 2%;
+}
+
+.lista{
+    display: block;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-decoration: none;
+    color: rgb(247, 242, 242);
+    width: 100%;
+    font-size: 17px;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    transition: .4s;
+}
+
+ul li:hover a{
+    padding-left: 10px;
+    transition: .4s;
+    color: white;
+    font-size: 18px;
+}
+
+#radiotop{
+    margin-top: 5%;
+}
+
+#uhf{
+    background-color: rgb(51, 40, 40);
+    padding: 3%;
+    text-decoration: none;
+    color: white;
+}
+
+#uhf:hover{
+    background-color:rgb(65, 52, 52) ;
+}
+
+#atras{
+    text-decoration: none; 
+    width: 100%; 
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+/* Propiedades tabla*/
+
+#tabla{
+    text-align: center;
+}
