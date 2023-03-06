@@ -2,23 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\logins;
-use App\Models\radiouhfs;
 use App\Models\radiovhfs;
 use Illuminate\Http\Request;
 
-class LoginsController extends Controller
+class RadiovhfsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $datosvista['datos']=radiouhfs::paginate(5);
-        $obtener['obtener']=radiovhfs::paginate(5);
-        return view('vista', $datosvista, $obtener);
-       
-
+        return view('radiovhf');
     }
 
     /**
@@ -34,15 +28,23 @@ class LoginsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datos = request()->except('_token');
+
+        if($request->hasFile('Foto')){
+            $datos['Foto']=$request->file('Foto')->store('uploads','public');
+        }
+
+        radiovhfs::insert($datos);
+        /*return response()->json($datos);*/
+        return view('radiovhf');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(logins $logins)
+    public function show(radiovhfs $radiovhfs)
     {
-       
+        //
     }
 
     /**
@@ -50,16 +52,14 @@ class LoginsController extends Controller
      */
     public function edit($id)
     {
-        $formato=radiouhfs::findOrFail($id);
+        $formato=radiovhfs::findOrFail($id);
         return view('estructura', compact('formato')); 
-        //Aqui se escribe el mismo nombre de la variable arriba
     }
 
-    
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, logins $logins)
+    public function update(Request $request, radiovhfs $radiovhfs)
     {
         //
     }
@@ -67,7 +67,7 @@ class LoginsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(logins $logins)
+    public function destroy(radiovhfs $radiovhfs)
     {
         //
     }

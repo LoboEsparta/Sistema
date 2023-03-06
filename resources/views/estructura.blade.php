@@ -1,8 +1,40 @@
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+<head>
+  <!-- $fecha =date("Y-m-d H:i:s");-->
+  <!--ByJesusHilarioJuarezOrtiz-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <title>Radios</title>
+
+        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+ crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+crossorigin="anonymous"></script>
+      
+
+    </head>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container-fluid">
+   <a class="navbar-brand" href="{{ url('/inicio')}}">Comisión Federal de Electricidad</a>
+  </div>
+    </nav>
+
+    
+    <a href="{{ url('/vista')}}"><span> <img src="/sistema/resources/css/flecha-izquierda.png" id="boton"></span> </a>
+    
+
+
 <div class="container">
 
 
-    <h3>Radio UHF</h3>
+    <h3>Radios {{ $formato->tipo }}</h3>
    
     <div class="row">
       <h5>Moviles/Portatiles</h5>
@@ -289,98 +321,7 @@
       </div>
     </div>
 
-    <div class="container text-center">
-      <div class="row">
-        <div class="col">
-        
-        </div>
-        <div class="col-6">
-          <h5>Frecuencias</h5>
-          <table class="table table-bordered table-sm">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">TX</th>
-                <th scope="col">Rx</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">7</th>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <th scope="row">8</th>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <th scope="row">9</th>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">10</th>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <th scope="row">11</th>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <th scope="row">12</th>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col">
-         
-        </div>
-      </div>
-    </div>
+ 
 
 
     <div class="row">

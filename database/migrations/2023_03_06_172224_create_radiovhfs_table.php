@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('radiouhfs', function (Blueprint $table) {
+        Schema::create('radiovhfs', function (Blueprint $table) {
             $table->id();
 
             $table->string('tipo')->nullable();
@@ -88,7 +88,7 @@ return new class extends Migration
             $table->string('usuario')->nullable();
 
             $table->string('Foto')->nullable();
-
+            
             $table->timestamps();
         });
     }
@@ -98,6 +98,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('radiouhfs');
+        Schema::dropIfExists('radiovhfs');
     }
 };

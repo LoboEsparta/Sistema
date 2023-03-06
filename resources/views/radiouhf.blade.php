@@ -1,6 +1,7 @@
 <?php
  date_default_timezone_set('America/Mexico_City');
  $fecha =date("Y-m-d");
+
  ?>
 
 <head>
@@ -11,7 +12,7 @@
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         @vite(['../resources/css/app.css', 'resources/js/app.js'])
 
-        <title>Radios UHF-VHF</title>
+        <title>Radio UHF</title>
 
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -50,7 +51,6 @@ aria-labelledby="offcanvasExampleLabel">
       <ul class="">
         <li><a class="lista" href="{{ url('radiovhf')}}">VHF Radio</a></li>
         <li><a class="lista" href="{{ url('radiouhf')}}">UHF Radio</a></li>
-        <li><a class="lista" href="{{ url('inicio')}}">Radios UHF y VHF</a></li>
         <li><a class="lista" href="{{ url('vista')}}">Login Admin</a></li>
         <li><a class="lista" href="#">Formato 4</a></li>
       </ul>
@@ -64,9 +64,9 @@ aria-labelledby="offcanvasExampleLabel">
     <h3>Formato de Mantenimiento Radio UHF</h3>
     <form action= "{{ url('/radiouhf') }}" method="post" enctype="multipart/form-data">
 @csrf
-
     <div class="row">
       <h5>Moviles/Portatiles</h5>
+      <input type="hidden" value="UHF" name="tipo">
       <h5>Zona</h5>
       <h4>Tehuacán</h4>
     </div>
@@ -424,71 +424,66 @@ aria-labelledby="offcanvasExampleLabel">
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td></td>
-                <td></td>
+                <td>952.61250</td>
+                <td>928.61250</td>
                 
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td></td>
-                <td></td>
+                <td>425.00000</td>
+                <td>425.00000</td>
                 
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td></td>
-                <td></td>
+                <td>425.51250</td>
+                <td>425.51250</td>
               </tr>
               <tr>
                 <th scope="row">4</th>
-                <td></td>
-                <td></td>
+                <td>425.00000</td>
+                <td>425.00000</td>
                 
               </tr>
               <tr>
                 <th scope="row">5</th>
-                <td></td>
-                <td></td>
+                <td>425.51250</td>
+                <td>425.51250</td>
                 
               </tr>
               <tr>
                 <th scope="row">6</th>
-                <td></td>
-                <td></td>
+                <td>928.51250</td>
+                <td>952.51250</td>
               </tr>
               <tr>
                 <th scope="row">7</th>
-                <td></td>
-                <td></td>
+                <td>928.31250</td>
+                <td>952.31250</td>
                 
               </tr>
               <tr>
                 <th scope="row">8</th>
-                <td></td>
-                <td></td>
+                <td>425.82500</td>
+                <td>425.82500</td>
                 
               </tr>
               <tr>
                 <th scope="row">9</th>
-                <td></td>
-                <td></td>
+                <td>425.82500</td>
+                <td>425.82500</td>
               </tr>
               <tr>
                 <th scope="row">10</th>
-                <td></td>
-                <td></td>
+                <td>425.82500</td>
+                <td>425.82500</td>
                 
               </tr>
               <tr>
                 <th scope="row">11</th>
-                <td></td>
-                <td></td>
+                <td>425.00000</td>
+                <td>425.00000</td>
                 
-              </tr>
-              <tr>
-                <th scope="row">12</th>
-                <td></td>
-                <td></td>
               </tr>
             </tbody>
           </table>

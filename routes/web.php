@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RadiouhfsController;
+use App\Http\Controllers\RadiovhfsController;
 use App\Http\Controllers\LoginsController;
 
 
@@ -36,6 +37,7 @@ Route::resource('radiouhf', RadiouhfsController::class);
 Route::get('/radiovhf', function () {
     return view('radiovhf');
 });
+Route::resource('radiovhf', RadiovhfsController::class);
 
 
 

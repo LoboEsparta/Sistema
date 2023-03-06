@@ -40,7 +40,6 @@ aria-labelledby="offcanvasExampleLabel">
       <ul class="">
         <li><a class="lista" href="{{ url('radiovhf')}}">VHF Radio</a></li>
         <li><a class="lista" href="{{ url('radiouhf')}}">UHF Radio</a></li>
-        <li><a class="lista" href="{{ url('inicio')}}">Radios UHF y VHF</a></li>
         <li><a class="lista" href="{{ url('vista')}}">Login Admin</a></li>
         <li><a class="lista" href="#">Formato 4</a></li>
       </ul>

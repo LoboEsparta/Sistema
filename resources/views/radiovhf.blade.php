@@ -11,7 +11,7 @@
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        <title>Radios UHF-VHF</title>
+        <title>Radio VHF</title>
 
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -50,7 +50,6 @@ aria-labelledby="offcanvasExampleLabel">
       <ul class="">
         <li><a class="lista" href="{{ url('radivuhf')}}">VHF Radio</a></li>
         <li><a class="lista" href="{{ url('radiouhf')}}">UHF Radio</a></li>
-        <li><a class="lista" href="{{ url('inicio')}}">Radios UHF y VHF</a></li>
         <li><a class="lista" href="{{ url('vista')}}">Login Admin</a></li>
         <li><a class="lista" href="#">Formato 4</a></li>
       </ul>
@@ -62,11 +61,12 @@ aria-labelledby="offcanvasExampleLabel">
 
 <div class="container">
     <h3>Formato de Mantenimiento Radio VHF</h3>
-    <form action= "{{ url('/vhf') }}" method="post">
+    <form action= "{{ url('/radiovhf') }}" method="post" enctype="multipart/form-data">
 @csrf
 
     <div class="row">
       <h5>Moviles/Portatiles</h5>
+      <input type="hidden" value="VHF" name="tipo">
       <h5>Zona</h5>
       <h4>Tehuacán</h4>
     </div>
@@ -422,71 +422,60 @@ aria-labelledby="offcanvasExampleLabel">
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td></td>
-                <td></td>
+                <td>161.82500</td>
+                <td>166.75000</td>
                 
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td></td>
-                <td></td>
+                <td>157.12500</td>
+                <td>155.10000</td>
                 
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td></td>
-                <td></td>
+                <td>163.37500</td>
+                <td>162.72500</td>
               </tr>
               <tr>
                 <th scope="row">4</th>
-                <td></td>
-                <td></td>
+                <td>157.95000</td>
+                <td>163.65000</td>
                 
               </tr>
               <tr>
                 <th scope="row">5</th>
-                <td></td>
-                <td></td>
+                <td>158.10000</td>
+                <td>152.42500</td>
                 
               </tr>
               <tr>
                 <th scope="row">6</th>
-                <td></td>
-                <td></td>
+                <td>163.35000</td>
+                <td>162.80000</td>
               </tr>
               <tr>
                 <th scope="row">7</th>
-                <td></td>
-                <td></td>
+                <td>158.32500</td>
+                <td>158.32500</td>
                 
               </tr>
               <tr>
                 <th scope="row">8</th>
-                <td></td>
-                <td></td>
+                <td>163.65000</td>
+                <td>159.95000</td>
                 
               </tr>
               <tr>
                 <th scope="row">9</th>
-                <td></td>
-                <td></td>
+                <td>163.82500</td>
+                <td>162.82500</td>
               </tr>
               <tr>
                 <th scope="row">10</th>
-                <td></td>
-                <td></td>
+                <td>160.1</td>
+                <td>156.225</td>
                 
-              </tr>
-              <tr>
-                <th scope="row">11</th>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <th scope="row">12</th>
-                <td></td>
-                <td></td>
               </tr>
             </tbody>
           </table>
@@ -532,9 +521,10 @@ aria-labelledby="offcanvasExampleLabel">
     </div>
 
     <div class="row">
+    <h5>***En caso de utilizar evidencia fotografica seleccione su archivo***</h5>
         <div class="col">
         <div class="">
-  <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+  <input type="file" class="form-control" name="Foto" aria-label="Upload">
 </div>
         </div>
       </div>

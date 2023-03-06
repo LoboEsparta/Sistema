@@ -44,7 +44,6 @@ aria-labelledby="offcanvasExampleLabel">
       <ul class="">
         <li><a class="lista" href="{{ url('radiovhf')}}">VHF Radio</a></li>
         <li><a class="lista" href="{{ url('radiouhf')}}">UHF Radio</a></li>
-        <li><a class="lista" href="{{ url('inicio')}}">Radios UHF y VHF</a></li>
         <li><a class="lista" href="{{ url('vista')}}">Login Admin</a></li>
         <li><a class="lista" href="#">Formato 4</a></li>
       </ul>
@@ -54,9 +53,8 @@ aria-labelledby="offcanvasExampleLabel">
 
 <div class="container">
 
-
-    <h3>Listado de Radios UHF y VHF</h3>
     <div class="row text-center">
+    <h4>Listado de Radios UHF</h4>
       <div class="row">
         <div class="col">
           <table class="table">
@@ -66,19 +64,16 @@ aria-labelledby="offcanvasExampleLabel">
       <th scope="col">Formato</th>
       <th scope="col">Fecha</th>
       <th scope="col">Zona</th>
-      <th scope="col">Visualizar</th>
+      <th scope="col">Ver formato</th>
     </tr>
   </thead>
   <tbody>
     @foreach ($datos as $dato)
     <tr>
       <td> {{$dato->id}} </td>
-      <td>Formato No#{{$dato->id}}</td>
+      <td>Formato No. {{$dato->id}} Radio: {{$dato->tipo}}</td>
       <td>{{$dato->fecha}}</td>
       <td>Tehuacán</td>
-      <td>
-        <img src="{{ asset('storage').'/'.$dato->Foto }}" alt="200" width="200">
-      </td>
       <td>
 
       <a href="{{url ('/vista/'.$dato->id.'/edit') }}">
@@ -86,6 +81,47 @@ aria-labelledby="offcanvasExampleLabel">
       </a>
       </td>
     </tr>
+@endforeach
+
+</tbody>
+
+
+</table>
+</div>
+</div>
+</div>
+
+
+
+    <div class="row text-center">
+    <h4>Listado de Radios VHF</h4>
+      <div class="row">
+        <div class="col">
+          <table class="table">
+          <thead>
+    <tr>
+        <th>id</th>
+      <th scope="col">Formato</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Zona</th>
+      <th scope="col">Ver formato</th>
+    </tr>
+  </thead>
+  
+@foreach ($obtener as $tener)
+    <tr>
+      <td> {{$tener->id}} </td>
+      <td>Formato No. {{$tener->id}} Radio: {{$tener->tipo}}</td>
+      <td>{{$tener->fecha}}</td>
+      <td>Tehuacán</td>
+      <td>
+
+      <a href="{{url ('/radiovhf/'.$tener->id.'/edit') }}">
+        Visualizar
+      </a>
+      </td>
+    </tr>
+
     @endforeach
   </tbody>
 
