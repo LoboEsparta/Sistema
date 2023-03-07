@@ -31,7 +31,8 @@ crossorigin="anonymous"></script>
     
 
 
-<div class="container">
+<div class="container" id="contenido">
+
 
 
     <h3>Radios {{ $formato->tipo }}</h3>
@@ -361,6 +362,8 @@ crossorigin="anonymous"></script>
       <h5>*** fotografia ***</h5>
         <div class="col" id="medio">
         <img src="{{ asset('storage').'/'.$formato->Foto }}" alt="200" width="200">
+        <img src="{{ asset('storage').'/'.$formato->Foto }}" alt="200" width="200">
+        <img src="{{ asset('storage').'/'.$formato->Foto }}" alt="200" width="200">
         </div>
       </div>
 
@@ -384,6 +387,5 @@ crossorigin="anonymous"></script>
   </div>
 
 
-
-  </body>
+</div>
   <!--ByJesusHilarioJuarezOrtiz-->

@@ -34,7 +34,7 @@ crossorigin="anonymous"></script>
 
 
 
-    <body>
+
 
     <span> <img src="../resources/css/lista.png" id="boton" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
 aria-controls="offcanvasExample"></span>
@@ -60,7 +60,7 @@ aria-labelledby="offcanvasExampleLabel">
 
 <!--                     Aqui empieza el contenido del sistema web            -->
 
-<div class="container">
+<div class="container" id="contenido">
     <h3>Formato de Mantenimiento Radio UHF</h3>
     <form action= "{{ url('/radiouhf') }}" method="post" enctype="multipart/form-data">
 @csrf
@@ -534,7 +534,7 @@ aria-labelledby="offcanvasExampleLabel">
         <div class="col">
         <div class="">
   <input type="file" class="form-control" aria-describedby="inputGroupFileAddon04" 
-  aria-label="Upload" name="Foto" id="Foto">
+  aria-label="Upload" name="Foto" id="Foto" multiple>
         </div>
         </div>
       </div>
@@ -560,7 +560,10 @@ aria-labelledby="offcanvasExampleLabel">
 
   </div>
 
-<!-- Modal -->
+
+
+</div>
+  <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

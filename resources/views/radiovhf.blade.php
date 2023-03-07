@@ -59,10 +59,10 @@ aria-labelledby="offcanvasExampleLabel">
 
 <!--                     Aqui empieza el contenido del sistema web            -->
 
-<div class="container">
+<div class="container" id="contenido">
     <h3>Formato de Mantenimiento Radio VHF</h3>
     <form action= "{{ url('/radiovhf') }}" method="post" enctype="multipart/form-data">
-@csrf
+    @csrf
 
     <div class="row">
       <h5>Moviles/Portatiles</h5>
@@ -525,30 +525,32 @@ aria-labelledby="offcanvasExampleLabel">
         <div class="col">
         <div class="">
   <input type="file" class="form-control" name="Foto" aria-label="Upload">
-</div>
-        </div>
-      </div>
 
-    <h3 id="margen">¡¡Asegurate de que todos los datos introducidos esten correctos antes de su envio!!</h3>
+  
+  <h3 id="margen">¡¡Asegurate de que todos los datos introducidos esten correctos antes de su envio!!</h3>
 
 
-    <div class="row">
-      <div class="col"></div>
-      <div class="col text-center">
-        <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModal">Enviar</button>
-      </div>
-      <div class="col"></div>
-    </div>
-    
-
-
-
-
-
-
-    </form>
-
+<div class="row">
+  <div class="col"></div>
+  <div class="col text-center">
+    <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModal">Enviar</button>
   </div>
+  <div class="col"></div>
+</div>
+
+
+
+
+
+
+
+</form>
+
+</div>
+
+</div>
+        
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
