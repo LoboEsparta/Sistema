@@ -35,7 +35,7 @@ crossorigin="anonymous"></script>
 
 
 
-    <h3>Radios {{ $formato->tipo }}</h3>
+    <h3>Radios </h3>
    
     <div class="row">
       <h5>Moviles/Portatiles</h5>
@@ -359,12 +359,16 @@ crossorigin="anonymous"></script>
     </div>
 
     <div class="row">
-      <h5>*** fotografia ***</h5>
+      <h5>*** Si no hay evidencia fotografica, No se mostraran fotos ***</h5>
         <div class="col" id="medio">
-        <img src="{{ asset('storage').'/'.$formato->Foto }}" alt="200" width="200">
-        <img src="{{ asset('storage').'/'.$formato->Foto }}" alt="200" width="200">
-        <img src="{{ asset('storage').'/'.$formato->Foto }}" alt="200" width="200">
+        <img src="{{ asset('storage').'/'.$formato->Foto }}" id="forma">
         </div>
+        <div class="col" id="medio">
+        <img src="{{ asset('storage').'/'.$formato->Fotodos }}" id="forma">
+        </div>
+        <div class="col" id="medio">
+        <img src="{{ asset('storage').'/'.$formato->Fototres }}" id="forma" >
+      </div>
       </div>
 
 

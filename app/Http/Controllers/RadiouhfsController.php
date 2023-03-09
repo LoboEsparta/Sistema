@@ -29,9 +29,14 @@ class RadiouhfsController extends Controller
     public function store(Request $request)
     {
         $datos = request()->except('_token');
-
         if($request->hasFile('Foto')){
             $datos['Foto']=$request->file('Foto')->store('uploads','public');
+        }
+        if($request->hasFile('Fotodos')){
+            $datos['Fotodos']=$request->file('Fotodos')->store('uploads','public');
+        }
+        if($request->hasFile('Fototres')){
+            $datos['Fototres']=$request->file('Fototres')->store('uploads','public');
         }
 
         radiouhfs::insert($datos);

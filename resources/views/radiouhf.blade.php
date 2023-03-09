@@ -61,12 +61,11 @@ aria-labelledby="offcanvasExampleLabel">
 <!--                     Aqui empieza el contenido del sistema web            -->
 
 <div class="container" id="contenido">
-    <h3>Formato de Mantenimiento Radio UHF</h3>
+    <h3>Mantenimiento Radio UHF</h3>
     <form action= "{{ url('/radiouhf') }}" method="post" enctype="multipart/form-data">
 @csrf
     <div class="row">
       <h5>Moviles/Portatiles</h5>
-      <input type="hidden" value="UHF" name="tipo">
       <h5>Zona</h5>
       <h4>Tehuacán</h4>
     </div>
@@ -530,12 +529,19 @@ aria-labelledby="offcanvasExampleLabel">
     </div>
 
     <div class="row">
-      <h5>***En caso de utilizar evidencia fotografica seleccione su archivo***</h5>
+    <h5>En caso de utilizar evidencia fotografica saque las fotografias y despues seleccione sus archivo</h5>
+      <h5>***Solo se puede enviar hasta 3 fotografias***</h5>
         <div class="col">
-        <div class="">
-  <input type="file" class="form-control" aria-describedby="inputGroupFileAddon04" 
-  aria-label="Upload" name="Foto" id="Foto" multiple>
+        <input type="file" class="form-control" aria-describedby="inputGroupFileAddon04" 
+  aria-label="Upload" name="Foto" id="Foto">
+        </div>  
+        <div class="col">
+        <input type="file" class="form-control" aria-describedby="inputGroupFileAddon04" 
+  aria-label="Upload" name="Fotodos" id="Fotodos">
         </div>
+        <div class="col">
+        <input type="file" class="form-control" aria-describedby="inputGroupFileAddon04" 
+  aria-label="Upload" name="Fototres" id="Fototres">
         </div>
       </div>
 

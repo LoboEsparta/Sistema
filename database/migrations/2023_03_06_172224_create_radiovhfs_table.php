@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('radiovhfs', function (Blueprint $table) {
             $table->id();
-
-            $table->string('tipo')->nullable();
             $table->string('area')->nullable();
 
             $table->date('fecha')->nullable();
@@ -88,6 +86,8 @@ return new class extends Migration
             $table->string('usuario')->nullable();
 
             $table->string('Foto')->nullable();
+            $table->string('Fotodos')->nullable();
+            $table->string('Fototres')->nullable();
             
             $table->timestamps();
         });

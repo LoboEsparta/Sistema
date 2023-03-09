@@ -1,3 +1,12 @@
+<?php
+
+$uhf = "UHF";
+$vhf = "VHF";
+
+?>
+
+
+
 <head>
   <!--ByJesusHilarioJuarezOrtiz-->
         <meta charset="utf-8">
@@ -71,7 +80,7 @@ aria-labelledby="offcanvasExampleLabel">
     @foreach ($datos as $dato)
     <tr>
       <td> {{$dato->id}} </td>
-      <td>Formato No. {{$dato->id}} Radio: {{$dato->tipo}}</td>
+      <td>Formato No. {{$dato->id}} Radio: {{$uhf}}</td>
       <td>{{$dato->fecha}}</td>
       <td>Tehuacán</td>
       <td>
@@ -111,7 +120,7 @@ aria-labelledby="offcanvasExampleLabel">
 @foreach ($obtener as $tener)
     <tr>
       <td> {{$tener->id}} </td>
-      <td>Formato No. {{$tener->id}} Radio: {{$tener->tipo}}</td>
+      <td>Formato No. {{$tener->id}} Radio: {{$vhf}}</td>
       <td>{{$tener->fecha}}</td>
       <td>Tehuacán</td>
       <td>
