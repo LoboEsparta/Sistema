@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\radiouhfs;
+use App\Models\radiouhfdos;
 use Illuminate\Http\Request;
 
 class RadiouhfsController extends Controller
@@ -28,20 +29,101 @@ class RadiouhfsController extends Controller
      */
     public function store(Request $request)
     {
-        $datos = request()->except('_token');
-        if($request->hasFile('Foto')){
-            $datos['Foto']=$request->file('Foto')->store('uploads','public');
-        }
-        if($request->hasFile('Fotodos')){
-            $datos['Fotodos']=$request->file('Fotodos')->store('uploads','public');
-        }
-        if($request->hasFile('Fototres')){
-            $datos['Fototres']=$request->file('Fototres')->store('uploads','public');
-        }
+        
+        $datos = request()->except(
+            'usuario',
+            'rpe',
+            'inspecciono',
+            'textarea',
+            'tabla1',
+            'tabla2',
+            'tabla3',
+            'tabla4',
+            'tabla5',
+            'tabla6',
+            'tabla7',
+            'tabla8',
+            'tabla9',
+            'tabla10',
+            'tabla11',
+            'tabla12',
+            'tabla13',
+            'tabla14',
+            'Antena',
+            'Cable',
+            'Conectores',
+            'Bocina',
+            'Control',
+            'Cabeza',
+            'Terminal',
+            'Cableado',
+            'Fusible',
+            'Portafusible',
+            'Terminalb',
+            'Cargadorbat',
+            'Limpieza',
+            'Bateria',
+            'Respaldo',
+            'Tierras',
+            '_token'
+        );
+    
+            $datos2 = request()->except(
+            'area',
+            'tipo',
+            'fecha',
+            'Cedula',
+            'Repetidor',
+            'UTR',
+            'Otros',
+            'Mantenimiento',
+            'Ubicacion',
+            'Responsable',
+            'Oficina',
+            'Direccion',
+            'Marca',
+            'Modelo',
+            'Serie',
+            'Potencia',
+            'Reflejo',
+            'Modulacion',
+            'Sensibilidad',
+            'Frec',
+            'Señal',
+            'RX',
+            'Tx',
+            'VCA',
+            'VCD',
+            'Cargador',
+            'Banco',
+            'Inversor',
+            'Foto',
+            'Fotodos',
+            'Fototres',
+            '_token');
+    
+    
+    
+    
+            if($request->hasFile('Foto')){
+                $datos['Foto']=$request->file('Foto')->store('uploads','public');
+            }
+            if($request->hasFile('Fotodos')){
+                $datos['Fotodos']=$request->file('Fotodos')->store('uploads','public');
+            }
+            if($request->hasFile('Fototres')){
+                $datos['Fototres']=$request->file('Fototres')->store('uploads','public');
+            }
+    
+            radiouhfdos::insert($datos);
+            uhfradios::insert($datos2);
+            //return response()->json($datos2);
+            return view('radiouhf');
 
-        radiouhfs::insert($datos);
-        /*return response()->json($datos);*/
-        return view('radiouhf');
+
+
+
+
     }
 
     /**

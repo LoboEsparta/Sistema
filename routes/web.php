@@ -56,3 +56,6 @@ Route::get('/estructura', function () {
     return view('estructura');
 });
 Route::resource('estructura', LoginsController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

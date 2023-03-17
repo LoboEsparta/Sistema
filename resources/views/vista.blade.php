@@ -30,10 +30,27 @@ crossorigin="anonymous"></script>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid">
-   <a class="navbar-brand" href="{{ url('/inicio')}}">Comisión Federal de Electricidad</a>
+   <a class="navbar-brand" href="{{ url('/home')}}">Comisión Federal de Electricidad</a>
+  <div>
+  <li class="nav-item dropdown" id="color">
+      <a id="lista" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" 
+      aria-expanded="false" v-pre>
+            {{ Auth::user()->name }}
+      </a>
+    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="lista">
+         <a class="dropdown-item" href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();">
+          {{ __('Logout') }}
+         </a>
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+          </form>
+     </div>
+   </li>
   </div>
-    </nav>
-
+</div>  
+  </nav>
 
 
     <body>
@@ -72,7 +89,8 @@ aria-labelledby="offcanvasExampleLabel">
         <th>id</th>
       <th scope="col">Formato</th>
       <th scope="col">Fecha</th>
-      <th scope="col">Zona</th>
+      <th scope="col">Area</th>
+      <th scope="col">ECO/Ubicación</th>
       <th scope="col">Ver formato</th>
     </tr>
   </thead>
@@ -80,9 +98,12 @@ aria-labelledby="offcanvasExampleLabel">
     @foreach ($datos as $dato)
     <tr>
       <td> {{$dato->id}} </td>
-      <td>Formato No. {{$dato->id}} Radio: {{$uhf}}</td>
+      <td>Formato No. {{$dato->id}} Radio Serie: {{$dato->Serie}}</td>
       <td>{{$dato->fecha}}</td>
-      <td>Tehuacán</td>
+      <th>{{$dato->area}}</th>
+      <td>{{$dato->Ubicacion}}</td>
+            <!--<td> <img src="{{ asset('storage').'/'. $dato->Foto }}" alt="200" width="200"> </td>-->
+
       <td>
 
       <a href="{{url ('/vista/'.$dato->id.'/edit') }}">

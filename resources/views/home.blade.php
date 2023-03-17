@@ -19,10 +19,27 @@
     </head>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid">
-   <a class="navbar-brand" href="{{ url('/inicio')}}">Comisión Federal de Electricidad</a>
+   <a class="navbar-brand" href="{{ url('/home')}}">Comisión Federal de Electricidad</a>
+  <div>
+  <li class="nav-item dropdown" id="color">
+      <a id="lista" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" 
+      aria-expanded="false" v-pre>
+            {{ Auth::user()->name }}
+      </a>
+    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="lista">
+         <a class="dropdown-item" href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();">
+          {{ __('Logout') }}
+         </a>
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+          </form>
+     </div>
+   </li>
   </div>
-    </nav>
-
+</div>  
+  </nav>
 
 <span> <img src="../resources/css/lista.png" id="boton" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
 aria-controls="offcanvasExample"></span>
@@ -50,26 +67,16 @@ aria-labelledby="offcanvasExampleLabel">
 
 
 
+          <div class="row text-center" >
+            <div class="col" >
+              <img src="../resources/css/FoquitoCFE.jpg">
+  
+                <h2>Vamos a elegir un Formato Ing. {{ Auth::user()->name }}!</h2>
+            
+            </div>
+          </div>
 
-
-
-
-
-
-<body id="background">
-<div class="container">
-    <div class="row">
-        <div class="col-2">
-
-        </div>
-        <div class="col text-center" id="fondo">
-            <label for="" id="login-label">Usuario</label>
-            <input type="text" placeholder="Ingresar su Usuario" id="login-input">
-            <label for="" id="login-label">Contraseña</label>
-            <input type="password" placeholder="Ingrese su Contraseña" id="login-input">
-        </div>
-        <div class="col-2"></div>
-    </div>
 </div>
-</body>
 
+</html>
+<!--ByJesusHilarioJuarezOrtiz-->

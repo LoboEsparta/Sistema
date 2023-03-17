@@ -28,10 +28,27 @@ crossorigin="anonymous"></script>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid">
-   <a class="navbar-brand" href="{{ url('/inicio')}}">Comisión Federal de Electricidad</a>
+   <a class="navbar-brand" href="{{ url('/home')}}">Comisión Federal de Electricidad</a>
+  <div>
+  <li class="nav-item dropdown" id="color">
+      <a id="lista" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" 
+      aria-expanded="false" v-pre>
+            {{ Auth::user()->name }}
+      </a>
+    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="lista">
+         <a class="dropdown-item" href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();">
+          {{ __('Logout') }}
+         </a>
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+          </form>
+     </div>
+   </li>
   </div>
-    </nav>
-
+</div>  
+  </nav>
 
 
 
@@ -72,6 +89,7 @@ aria-labelledby="offcanvasExampleLabel">
     <div class="row">
       <div>
         <label for="" class="form-label">Area/Gerencia</label>
+        <input type="hidden" value="UHF" name="tipo">
         <input type="text" name="area" class="form-control" placeholder="Area/Gerencia">
       </div>
     </div>
@@ -510,17 +528,13 @@ aria-labelledby="offcanvasExampleLabel">
           <span class="input-group-text">R.P.E</span>
           <input type="text" class="form-control" placeholder="R.P.E" aria-label="RPE" name="rpe">
           <span class="input-group-text">Firma</span>
-          <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+          <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" name="usuario" value="{{ Auth::user()->name }}" disabled>
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col">
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Historial del equipo: </label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="textoarea"></textarea>
-        </div>
         <div class="input-group mb-3">
           <span class="input-group-text">Vo. Bo.</span>
           <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" name="usuario">

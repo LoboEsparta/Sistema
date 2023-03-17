@@ -211,6 +211,27 @@ ul li:hover a{
 }
 
 
+#lista{
+    color: white;
+    font-size: 18px;
+    padding-right: 4%;
+}
+
+#color{
+    list-style: none;
+}
+
+.form-check-label{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
 /*      media        */ 
 
 

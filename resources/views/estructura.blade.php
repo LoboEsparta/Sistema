@@ -22,9 +22,27 @@ crossorigin="anonymous"></script>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid">
-   <a class="navbar-brand" href="{{ url('/inicio')}}">Comisión Federal de Electricidad</a>
+   <a class="navbar-brand" href="{{ url('/home')}}">Comisión Federal de Electricidad</a>
+  <div>
+  <li class="nav-item dropdown" id="color">
+      <a id="lista" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" 
+      aria-expanded="false" v-pre>
+            {{ Auth::user()->name }}
+      </a>
+    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="lista">
+         <a class="dropdown-item" href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();">
+          {{ __('Logout') }}
+         </a>
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+          </form>
+     </div>
+   </li>
   </div>
-    </nav>
+</div>  
+  </nav>
 
     
     <a href="{{ url('/vista')}}"><span> <img src="/sistema/resources/css/flecha-izquierda.png" id="boton"></span> </a>
