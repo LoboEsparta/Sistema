@@ -6,12 +6,9 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-
         <title>Comisión Federal de Electricidad</title>
 
-        <link href="../css/app.css" rel="stylesheet">
+        <link rel="stylesheet" href="build/assets/app.css">
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
