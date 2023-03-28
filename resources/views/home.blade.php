@@ -3,11 +3,16 @@
     <head>
     <!--ByJesusHilarioJuarezOrtiz-->
     <link rel="icon" href="{{ asset('favicon.ico') }}">
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+ crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+crossorigin="anonymous"></script>
         <title>Comisión Federal de Electricidad</title>
-
+        <script src="build/assets/app-4c85f5d2.js"></script>
         <link rel="stylesheet" href="build/assets/app.css">
 
         <!-- Fonts -->
@@ -54,7 +59,7 @@ aria-labelledby="offcanvasExampleLabel">
       <ul class="">
         <li><a class="lista" href="{{ url('radiovhf')}}">VHF Radio</a></li>
         <li><a class="lista" href="{{ url('radiouhf')}}">UHF Radio</a></li>
-        <li><a class="lista" href="{{ url('vista')}}">Login Admin</a></li>
+        <li><a class="lista" href="{{ url('vista')}}">Listas</a></li>
         <li><a class="lista" href="#">Formato 4</a></li>
       </ul>
     </div>

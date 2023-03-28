@@ -10,7 +10,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        @vite(['../resources/css/app.css', 'resources/js/app.js'])
+        <script src="build/assets/app-4c85f5d2.js"></script>
+        <link rel="stylesheet" href="build/assets/app.css">
 
         <title>Radio VHF</title>
 
@@ -69,7 +70,7 @@ aria-labelledby="offcanvasExampleLabel">
       <ul class="">
         <li><a class="lista" href="{{ url('radivuhf')}}">VHF Radio</a></li>
         <li><a class="lista" href="{{ url('radiouhf')}}">UHF Radio</a></li>
-        <li><a class="lista" href="{{ url('vista')}}">Login Admin</a></li>
+        <li><a class="lista" href="{{ url('vista')}}">Listas</a></li>
         <li><a class="lista" href="#">Formato 4</a></li>
       </ul>
     </div>

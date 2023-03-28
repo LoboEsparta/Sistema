@@ -226,7 +226,12 @@ ul li:hover a{
 }
 
 
-
+#registro{
+    text-decoration: none;
+    padding: 8px 15px ;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
 
 
 

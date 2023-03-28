@@ -11,9 +11,9 @@ $vhf = "VHF";
   <!--ByJesusHilarioJuarezOrtiz-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="build/assets/app-4c85f5d2.js"></script>
+        <link rel="stylesheet" href="build/assets/app.css">
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        @vite(['../resources/css/app.css', '../resources/js/app.js'])
-
         <title>Radios UHF-VHF</title>
 
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -70,7 +70,7 @@ aria-labelledby="offcanvasExampleLabel">
       <ul class="">
         <li><a class="lista" href="{{ url('radiovhf')}}">VHF Radio</a></li>
         <li><a class="lista" href="{{ url('radiouhf')}}">UHF Radio</a></li>
-        <li><a class="lista" href="{{ url('vista')}}">Login Admin</a></li>
+        <li><a class="lista" href="{{ url('vista')}}">Listas</a></li>
         <li><a class="lista" href="#">Formato 4</a></li>
       </ul>
     </div>
@@ -78,6 +78,19 @@ aria-labelledby="offcanvasExampleLabel">
 </div>
 
 <div class="container">
+
+
+<div class="row">
+  <div class="col text-end">
+    <a href="{{ route('register') }}" id="registro" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+      Registro de Personal</a>
+  </div>
+</div>
+
+
+
+
+
 
     <div class="row text-center">
     <h4>Listado de Radios UHF</h4>
