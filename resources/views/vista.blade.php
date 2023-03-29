@@ -1,12 +1,3 @@
-<?php
-
-$uhf = "UHF";
-$vhf = "VHF";
-
-?>
-
-
-
 <head>
   <!--ByJesusHilarioJuarezOrtiz-->
         <meta charset="utf-8">
@@ -82,7 +73,7 @@ aria-labelledby="offcanvasExampleLabel">
 
 <div class="row">
   <div class="col text-end">
-    <a href="{{ route('register') }}" id="registro" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+    <a href="{{ url('registro') }}" id="registro" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
       Registro de Personal</a>
   </div>
 </div>
@@ -146,7 +137,8 @@ aria-labelledby="offcanvasExampleLabel">
         <th>id</th>
       <th scope="col">Formato</th>
       <th scope="col">Fecha</th>
-      <th scope="col">Zona</th>
+      <th scope="col">Area</th>
+      <th scope="col">ECO/Ubicación</th>
       <th scope="col">Ver formato</th>
     </tr>
   </thead>
@@ -154,9 +146,10 @@ aria-labelledby="offcanvasExampleLabel">
 @foreach ($obtener as $tener)
     <tr>
       <td> {{$tener->id}} </td>
-      <td>Formato No. {{$tener->id}} Radio: {{$vhf}}</td>
+      <td>Formato No. {{$tener->id}} Radio Serie: {{$tener->Serie}}</td>
       <td>{{$tener->fecha}}</td>
-      <td>Tehuacán</td>
+      <td>{{$tener->area}}</td>
+      <td>{{$tener->Ubicacion}}</td>
       <td>
 
       <a href="{{url ('/radiovhf/'.$tener->id.'/edit') }}">

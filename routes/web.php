@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RadiouhfsController;
 use App\Http\Controllers\RadiovhfsController;
 use App\Http\Controllers\LoginsController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 
 /*
@@ -21,10 +22,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/inicio', function () {
-    return view('inicio');
-});
-
 
 Route::get('/login', function () {
     return view('login');
@@ -32,30 +29,36 @@ Route::get('/login', function () {
 
 
 Route::get('/radiouhf', function () {
-    return view('radiouhf');
+    return view('radiouhf')->middleware('auth');
 });
-Route::resource('radiouhf', RadiouhfsController::class);
+Route::resource('radiouhf', RadiouhfsController::class)->middleware('auth');
 
 
 
 Route::get('/radiovhf', function () {
     return view('radiovhf');
 });
-Route::resource('radiovhf', RadiovhfsController::class);
+Route::resource('radiovhf', RadiovhfsController::class)->middleware('auth');
 
 
 
 Route::get('/vista', function () {
     return view('vista');
 });
-Route::resource('vista', LoginsController::class);
+Route::resource('vista', LoginsController::class)->middleware('auth');
 
 
 
 Route::get('/estructura', function () {
     return view('estructura');
 });
-Route::resource('estructura', LoginsController::class);
+Route::resource('estructura', LoginsController::class)->middleware('auth');
+
+
+Route::view('/registro', 'auth.register')->name('register')->middleware('auth');;
+Route::post('/registro', [RegisteredUserController::class, 'store'])->middleware('auth');
+
+
 
 
 Auth::routes();
