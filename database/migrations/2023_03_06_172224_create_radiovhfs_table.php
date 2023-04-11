@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('radiovhfs', function (Blueprint $table) {
             $table->id();
+
+           
             $table->string('area')->nullable();
+            $table->string('tipo')->nullable();
 
             $table->date('fecha')->nullable();
 
@@ -45,46 +48,8 @@ return new class extends Migration
             $table->string('VCD')->nullable();
             $table->string('Cargador')->nullable();
             $table->string('Banco')->nullable();
-            $table->string('Inversor')->nullable();
-
-            $table->string('Tierras')->nullable();
-            $table->string('Respaldo')->nullable();
-
-            $table->string('Antena')->nullable();
-            $table->string('tabla1')->nullable();
-            $table->string('Cable')->nullable();
-            $table->string('tabla2')->nullable();
-            $table->string('Conectores')->nullable();
-            $table->string('tabla3')->nullable();
-            $table->string('Bocina')->nullable();
-            $table->string('tabla4')->nullable();
-            $table->string('Control')->nullable();
-            $table->string('tabla5')->nullable();
-            $table->string('Cabeza')->nullable();
-            $table->string('tabla6')->nullable();
-            $table->string('Terminal')->nullable();
-            $table->string('tabla7')->nullable();
-            $table->string('Cableado')->nullable();
-            $table->string('tabla8')->nullable();
-            $table->string('Fusible')->nullable();
-            $table->string('tabla9')->nullable();
-            $table->string('Portafusible')->nullable();
-            $table->string('tabla10')->nullable();
-            $table->string('Terminalb')->nullable();
-            $table->string('tabla11')->nullable();
-            $table->string('Cargadorbat')->nullable();
-            $table->string('tabla12')->nullable();
-            $table->string('Limpieza')->nullable();
-            $table->string('tabla13')->nullable();
-            $table->string('Bateria')->nullable();
-            $table->string('tabla14')->nullable();
+            $table->string('Inversor')->nullable(); 
             
-            $table->string('textarea')->nullable();
-            $table->string('inspecciono')->nullable();
-            $table->string('rpe')->nullable();
-            $table->string('textoarea')->nullable();
-            $table->string('usuario')->nullable();
-
             $table->string('Foto')->nullable();
             $table->string('Fotodos')->nullable();
             $table->string('Fototres')->nullable();

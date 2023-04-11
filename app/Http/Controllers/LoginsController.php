@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\logins;
 use App\Models\radiouhfs;
+use App\Models\radiouhfdos;
 use App\Models\radiovhfs;
 use Illuminate\Http\Request;
 
@@ -50,8 +51,10 @@ class LoginsController extends Controller
      */
     public function edit($id)
     {
+        $formatito=radiouhfdos::findOrFail($id);
         $formato=radiouhfs::findOrFail($id);
-        return view('estructura', compact('formato')); 
+        return view('estructura', compact('formato','formatito')); 
+        
         //Aqui se escribe el mismo nombre de la variable arriba
     }
 

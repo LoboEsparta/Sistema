@@ -115,8 +115,8 @@ class RadiouhfsController extends Controller
                 $datos['Fototres']=$request->file('Fototres')->store('uploads','public');
             }
     
-            radiouhfdos::insert($datos);
-            uhfradios::insert($datos2);
+            radiouhfdos::insert($datos2);
+            radiouhfs::insert($datos);
             //return response()->json($datos2);
             return view('radiouhf');
 

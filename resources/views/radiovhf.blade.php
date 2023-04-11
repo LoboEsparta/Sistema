@@ -68,9 +68,9 @@ aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-body">
     <div class="">
       <ul class="">
-        <li><a class="lista" href="{{ url('radivuhf')}}">VHF Radio</a></li>
+        <li><a class="lista" href="{{ url('radiovhf')}}">VHF Radio</a></li>
         <li><a class="lista" href="{{ url('radiouhf')}}">UHF Radio</a></li>
-        <li><a class="lista" href="{{ url('vista')}}">Listas</a></li>
+        <li><a class="lista" href="{{ url('vista')}}">Admin</a></li>
         <li><a class="lista" href="#">Formato 4</a></li>
       </ul>
     </div>
@@ -92,6 +92,7 @@ aria-labelledby="offcanvasExampleLabel">
     <div class="row">
       <div>
         <label for="" class="form-label">Area/Gerencia</label>
+        <input type="hidden" value="VHF" name="tipo">
         <input type="text" name="area" class="form-control" placeholder="Area/Gerencia">
       </div>
     </div>
@@ -521,17 +522,13 @@ aria-labelledby="offcanvasExampleLabel">
           <span class="input-group-text">R.P.E</span>
           <input type="text" class="form-control" placeholder="R.P.E" aria-label="RPE" name="rpe">
           <span class="input-group-text">Firma</span>
-          <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+          <input type="text" class="form-control" placeholder="Username" aria-label="usuario" value="{{ Auth::user()->name }}" disabled>
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col">
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Historial del equipo: </label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="textoarea"></textarea>
-        </div>
         <div class="input-group mb-3">
           <span class="input-group-text">Vo. Bo.</span>
           <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" name="usuario">
