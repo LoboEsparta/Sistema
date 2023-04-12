@@ -1,24 +1,25 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-    <!--ByJesusHilarioJuarezOrtiz-->
-    <link rel="icon" href="{{ asset('favicon.ico') }}">
+<head>
+  <!--ByJesusHilarioJuarezOrtiz-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="build/assets/app-4c85f5d2.js"></script>
+        <link rel="stylesheet" href="build/assets/app.css">
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
+        @vite( 'resources/css/app.css')
+        <title>Radios UHF-VHF</title>
+
+        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
  crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
 crossorigin="anonymous"></script>
-        <title>Comisión Federal de Electricidad</title>
-        <script src="build/assets/app-4c85f5d2.js"></script>
-        <link rel="stylesheet" href="build/assets/app.css">
-
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+      
 
     </head>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid">
    <a class="navbar-brand" href="{{ url('/home')}}">Comisión Federal de Electricidad</a>
@@ -43,9 +44,11 @@ crossorigin="anonymous"></script>
 </div>  
   </nav>
 
-<span> <img src="../resources/css/lista.png" id="boton" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
+
+    <body>
+
+    <span> <img src="../resources/css/lista.png" id="boton" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
 aria-controls="offcanvasExample"></span>
-<div class="container">
 
 
 <div class="offcanvas offcanvas-start  text-bg-primary" tabindex="1" id="offcanvasExample" 
@@ -66,19 +69,38 @@ aria-labelledby="offcanvasExampleLabel">
   </div>
 </div>
 
+<div class="container">
 
+<div class="row">
 
-
-          <div class="row text-center" >
-            <div class="col" >
-              <img src="../resources/css/FoquitoCFE.jpg">
-  
-                <h2>Vamos a elegir un Formato Ing. {{ Auth::user()->name }}!</h2>
-            
-            </div>
-          </div>
+<div class="col">
+<a href="{{ url('vista')}}" id="formato">
+<div class="card" id="cartas">
+  <img src="../resources/css/tarea.png" id="cartaimg">
+  <div class="card-body">
+    <h4 class="card-title" >Ver Listas</h4>
+  </div>
+</div>
+</a>
 
 </div>
 
-</html>
-<!--ByJesusHilarioJuarezOrtiz-->
+
+<div class="col">
+<a href="{{ url('personal')}}" id="formato">
+<div class="card" id="cartas">
+  <img src="../resources/css/usuarios.png" id="cartaimg">
+  <div class="card-body">
+    <h4 class="card-title" >Ver Personal</h4>
+  </div>
+</div>
+</a>
+
+</div>
+
+
+
+
+</div>
+
+</div>

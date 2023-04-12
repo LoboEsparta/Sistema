@@ -41,6 +41,14 @@ Route::get('/radiovhf', function () {
 Route::resource('radiovhf', RadiovhfsController::class)->middleware('auth');
 
 
+Route::get('/principal', function () {
+    return view('principal');
+})->middleware('can:principal') ->name('principal');
+
+Route::get('/personal', function () {
+    return view('personal');
+})->middleware('can:personal') ->name('personal');
+
 
 Route::get('/vista', function () {
     return view('vista');

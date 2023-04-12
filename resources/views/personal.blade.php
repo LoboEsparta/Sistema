@@ -46,106 +46,72 @@ crossorigin="anonymous"></script>
 
     <body>
 
-
-
-<div class="row">
+    <div class="row">
   <div class="col">
       <a href="{{ url('/principal')}}"><span> <img src="/sistema/resources/css/flecha-izquierda.png" id="boton"></span> </a>
 
   </div>
 </div>
 
+
+
+
 <div class="container">
 
 
+<div class="row">
+  <div class="col text-end">
+    <a href="{{ url('registro') }}" id="registro" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+      Registro de Personal</a>
+  </div>
+</div>
 
 
-    <div class="row text-center">
-    <h4>Listado de Radios UHF</h4>
-      <div class="row">
-        <div class="col">
-          <table class="table">
+<div class="row">
+    <div class="col">
+    <table class="table table-striped border-dark text-center">
   <thead>
     <tr>
-        <th>id</th>
-      <th scope="col">Formato</th>
-      <th scope="col">Fecha</th>
-      <th scope="col">Area</th>
-      <th scope="col">ECO/Ubicación</th>
-      <th scope="col">Ver formato</th>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Puesto</th>
+      <th>R.P:E</th>
+      <th>Editar</th>
     </tr>
   </thead>
   <tbody>
-    @foreach ($datos as $dato)
     <tr>
-      <td> {{$dato->id}} </td>
-      <td>Formato No. {{$dato->id}} Radio Serie: {{$dato->Serie}}</td>
-      <td>{{$dato->fecha}}</td>
-      <th>{{$dato->area}}</th>
-      <td>{{$dato->Ubicacion}}</td>
-            <!--<td> <img src="{{ asset('storage').'/'. $dato->Foto }}" alt="200" width="200"> </td>-->
-
+      <th scope="row">1</th>
+      <td>Hilario Juarez Hernandez</td>
+      <td>Comunicaciones</td>
+      <td>hjh12</td>
       <td>
-
-      <a href="{{url ('/vista/'.$dato->id.'/edit') }}">
-        Visualizar
-      </a>
+        <a href="">Editar Datos</a>
       </td>
     </tr>
-@endforeach
-
-</tbody>
-
-
-</table>
-</div>
-</div>
-</div>
-
-
-
-    <div class="row text-center">
-    <h4>Listado de Radios VHF</h4>
-      <div class="row">
-        <div class="col">
-          <table class="table">
-          <thead>
     <tr>
-        <th>id</th>
-      <th scope="col">Formato</th>
-      <th scope="col">Fecha</th>
-      <th scope="col">Area</th>
-      <th scope="col">ECO/Ubicación</th>
-      <th scope="col">Ver formato</th>
-    </tr>
-  </thead>
-  
-@foreach ($obtener as $tener)
-    <tr>
-      <td> {{$tener->id}} </td>
-      <td>Formato No. {{$tener->id}} Radio Serie: {{$tener->Serie}}</td>
-      <td>{{$tener->fecha}}</td>
-      <td>{{$tener->area}}</td>
-      <td>{{$tener->Ubicacion}}</td>
+      <th scope="row">2</th>
+      <td>Alfonso Perez Perez</td>
+      <td>Control</td>
+      <td>app13</td>
       <td>
-
-      <a href="{{url ('/radiovhf/'.$tener->id.'/edit') }}">
-        Visualizar
-      </a>
+        <a href="">Editar Datos</a>
       </td>
     </tr>
-
-    @endforeach
+    <tr>
+      <th scope="row">3</th>
+      <td>Marco Anotnio Gonzales</td>
+      <td>Comunicaciones</td>
+      <td>mag14</td>
+      <td>
+        <a href="">Editar Datos</a>
+      </td>
+    </tr>
   </tbody>
-
-
 </table>
-        
-      </div>
+
     </div>
-  </body>
-
-
+</div>
 
 
 

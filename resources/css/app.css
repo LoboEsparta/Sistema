@@ -1,5 +1,6 @@
 @import 'bootstrap';
 
+
 .container{
     margin-top: 2%;
 }
@@ -233,8 +234,28 @@ ul li:hover a{
     color: white;
 }
 
+#cartas{
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    width: 70% !important;
+    transition: .5s;
+    
+}
+#cartas:hover{
+    background-color: rgba(21, 1, 39, 0.212);
+    transition: .5s;
+}
+#cartaimg{
+    width: 50%;
+    margin: auto;
+    margin-top: 4%;
+}
 
-
+#formato{
+    text-decoration: none;
+    color: black;
+}
 
 
 /*      media        */ 
