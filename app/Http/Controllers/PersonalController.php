@@ -2,24 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\logins;
-use App\Models\radiouhfs;
-use App\Models\radiouhfdos;
-use App\Models\radiovhfs;
+use App\Models\personal;
 use Illuminate\Http\Request;
 
-class LoginsController extends Controller
+class PersonalController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $datosvista['datos']=radiouhfs::paginate(10);
-        $obtener['obtener']=radiovhfs::paginate(10);
-        return view('vista', $datosvista, $obtener);
-       
-
+        return view('personal');
     }
 
     /**
@@ -27,7 +20,7 @@ class LoginsController extends Controller
      */
     public function create()
     {
-    
+        return view ('principal');
     }
 
     /**
@@ -41,28 +34,23 @@ class LoginsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(logins $logins)
+    public function show(personal $personal)
     {
-       
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(personal $personal)
     {
-        $formatito=radiouhfdos::findOrFail($id);
-        $formato=radiouhfs::findOrFail($id);
-        return view('estructura', compact('formato','formatito')); 
-        
-        //Aqui se escribe el mismo nombre de la variable arriba
+        //
     }
 
-    
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, logins $logins)
+    public function update(Request $request, personal $personal)
     {
         //
     }
@@ -70,7 +58,7 @@ class LoginsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(logins $logins)
+    public function destroy(personal $personal)
     {
         //
     }

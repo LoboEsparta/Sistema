@@ -135,5 +135,5 @@ crossorigin="anonymous"></script>
 
 <br>
 <div class="col text-center">
-<a href="{{url ('vista')}}"  class="btn btn-dark">Atras</a>
+<a href="{{url ('principal')}}"  class="btn btn-dark">Atras</a>
 </div>

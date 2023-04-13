@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="build/assets/app.css">
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         @vite( 'resources/css/app.css')
-        <title>Radios UHF-VHF</title>
+        <title>Principal</title>
 
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 

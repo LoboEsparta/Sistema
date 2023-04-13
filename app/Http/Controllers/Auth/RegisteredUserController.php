@@ -23,6 +23,6 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request['password']),
         ]);
 
-        return to_route('vista')->with('status','Cuenta creada');
+        return to_route('principal')->with('status','Cuenta creada');
     }
 }

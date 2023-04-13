@@ -5,7 +5,7 @@
         <script src="build/assets/app-4c85f5d2.js"></script>
         <link rel="stylesheet" href="build/assets/app.css">
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <title>Radios UHF-VHF</title>
+        <title>Personal</title>
 
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
