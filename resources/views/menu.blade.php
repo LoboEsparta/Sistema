@@ -58,27 +58,10 @@ aria-labelledby="offcanvasExampleLabel">
     <div class="">
       <ul class="">
         <li><a class="lista" href="{{ url('radiovhf')}}">VHF Radio</a></li>
-        <li><a class="lista" href="{{url ('radiouhf')}}">UHF Radio</a></li>
+        <li><a class="lista" href="{{url ('/radiouhf/'.$persona->id) }}">UHF Radio</a></li>
         <li><a class="lista" href="{{ url('principal')}}">Admin</a></li>
         <li><a class="lista" href="#">Formato 4</a></li>
       </ul>
     </div>
   </div>
 </div>
-
-
-
-
-          <div class="row text-center" >
-            <div class="col" >
-              <img src="../resources/css/FoquitoCFE.jpg">
-  
-                <h2>Vamos a elegir un Formato Ing. {{ Auth::user()->name }}!</h2>
-            
-            </div>
-          </div>
-
-</div>
-
-</html>
-<!--ByJesusHilarioJuarezOrtiz-->

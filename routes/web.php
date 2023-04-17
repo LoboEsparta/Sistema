@@ -4,8 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RadiouhfsController;
 use App\Http\Controllers\RadiovhfsController;
 use App\Http\Controllers\LoginsController;
-use App\Http\Controllers\PersonalController;
+use App\Http\Controllers\PersonalsController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\MenuController;
 
 
 /*
@@ -36,6 +37,7 @@ Route::resource('radiouhf', RadiouhfsController::class)->middleware('auth');
 
 
 
+
 Route::get('/radiovhf', function () {
     return view('radiovhf');
 });
@@ -50,15 +52,24 @@ Route::resource('radiovhf', RadiovhfsController::class)->middleware('auth');
 Route::get('/principal', function () {
     return view('principal');
 });
-Route::get('/principal', [App\Http\Controllers\PersonalController::class, 'create'])->middleware('can:principal') ->name('principal');
+Route::get('/principal', [App\Http\Controllers\PersonalsController::class, 'ver'])->middleware('can:principal') ->name('principal');
 
 
 
 Route::get('/personal', function () {
     return view('personal');
 });
-Route::resource('personal', PersonalController::class)->middleware('auth');
-Route::get('/personal', [App\Http\Controllers\PersonalController::class, 'index'])->middleware('can:personal') ->name('personal');
+Route::resource('personal', PersonalsController::class)->middleware('auth');
+Route::get('/personal', [App\Http\Controllers\PersonalsController::class, 'index'])->middleware('can:personal') ->name('personal');
+
+
+Route::get('/editar', function () {
+    return view('editar');
+});
+Route::resource('personal', PersonalsController::class)->middleware('auth');
+//Route::get('/personal', [App\Http\Controllers\PersonalsController::class, 'edit'])->middleware('can:personal') ->name('personal');
+
+
 
 
 Route::get('/vista', function () {

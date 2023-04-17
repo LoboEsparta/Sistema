@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\radiouhfs;
 use App\Models\radiouhfdos;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RadiouhfsController extends Controller
@@ -13,7 +14,8 @@ class RadiouhfsController extends Controller
      */
     public function index()
     {
-        return view('radiouhf');
+        $datosusuario['personal']=User::paginate();
+        return view('radiouhf', $datosusuario);
     }
 
     /**
@@ -129,9 +131,12 @@ class RadiouhfsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(radiouhfs $radiouhfs)
+    public function show($id)
     {
-        //
+        $formato=User::findOrFail($id);
+        return view('radiouhf', compact('formato')); 
+        
+        //Aqui se escribe el mismo nombre de la variable arriba
     }
 
     /**

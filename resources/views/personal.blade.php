@@ -74,46 +74,34 @@ crossorigin="anonymous"></script>
     <tr>
       <th>#</th>
       <th>Nombre</th>
-      <th>Puesto</th>
-      <th>R.P:E</th>
+      <th>UserName</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Serie</th>
       <th>Editar</th>
     </tr>
   </thead>
+  @foreach ($personal as $persona)
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Hilario Juarez Hernandez</td>
-      <td>Comunicaciones</td>
-      <td>hjh12</td>
+      <th scope="row">{{ $persona -> id}}</th>
+      <td>{{ $persona -> name }}</td>
+      <td>{{ $persona -> username}}</td>
+      <td>{{ $persona -> marca}}</td>
+      <td>{{ $persona -> modelo}}</td>
+      <td>{{ $persona -> serie}}</td>
       <td>
-        <a href="">Editar Datos</a>
+      <a href="{{url ('/personal/'.$persona->id.'/edit') }}">
+        Editar
+      </a>
       </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Alfonso Perez Perez</td>
-      <td>Control</td>
-      <td>app13</td>
-      <td>
-        <a href="">Editar Datos</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Marco Anotnio Gonzales</td>
-      <td>Comunicaciones</td>
-      <td>mag14</td>
-      <td>
-        <a href="">Editar Datos</a>
-      </td>
-    </tr>
+    @endforeach
   </tbody>
 </table>
 
     </div>
 </div>
-
-
 
 
   <!--ByJesusHilarioJuarezOrtiz-->

@@ -117,6 +117,41 @@ crossorigin="anonymous"></script>
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+
+
+
+                        <div class="row mb-3">
+                            <label for="marca" class="col-md-4 col-form-label text-md-end">{{ __('Marca') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="marca" type="text" class="form-control @error('marca') is-invalid @enderror" name="marca" required autocomplete="marca">
+
+                        
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="modelo" class="col-md-4 col-form-label text-md-end">{{ __('Modelo') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="modelo" type="text" class="form-control @error('modelo') is-invalid @enderror" name="modelo" required autocomplete="modelo">
+
+                        
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="serie" class="col-md-4 col-form-label text-md-end">{{ __('Serie') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="serie" type="text" class="form-control @error('serie') is-invalid @enderror" name="serie" required autocomplete="serie">
+
+                        
+                            </div>
+                        </div>
+
+
+
                         
 
                         <div class="row mb-0">

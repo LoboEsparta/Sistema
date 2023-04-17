@@ -78,7 +78,7 @@ aria-labelledby="offcanvasExampleLabel">
 </div>
 
 <!--                     Aqui empieza el contenido del sistema web            -->
-
+@foreach ($personal as $persona)
 <div class="container" id="contenido">
     <h3>Mantenimiento Radio UHF</h3>
     <form action= "{{ url('/radiouhf') }}" method="post" enctype="multipart/form-data">
@@ -218,9 +218,9 @@ aria-labelledby="offcanvasExampleLabel">
       </thead>
       <tbody>
         <tr>
-          <td><input type="text" name="Marca" id="cuadro" placeholder="Marca"></td>
-          <td><input type="text" name="Modelo" id="cuadro" placeholder="Modelo"></td>
-          <td><input type="text" name="Serie" id="cuadro" placeholder="Serie"></td>
+          <td><input type="text" name="Marca" id="cuadro" value="{{ $persona -> name }}"></td>
+          <td><input type="text" name="Modelo" id="cuadro" value="{{ $persona -> modelo }}"></td>
+          <td><input type="text" name="Serie" id="cuadro" value="{{ $persona -> serie }}"></td>
         </tr>
       </tbody>
     </table>
@@ -579,7 +579,7 @@ aria-labelledby="offcanvasExampleLabel">
 
 
     </form>
-
+@endforeach
   </div>
 
 

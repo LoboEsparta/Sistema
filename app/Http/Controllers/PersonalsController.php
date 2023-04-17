@@ -2,17 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\personal;
+use App\Models\personals;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class PersonalController extends Controller
+class PersonalsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('personal');
+        $datosusuario['personal']=User::paginate();
+        return view('personal', $datosusuario);
+    }
+
+    public function ver()
+    {
+        return view ('principal');
+    }
+
+    public function radio()
+    {
+        return view ('radiouhf');
     }
 
     /**
@@ -20,7 +32,7 @@ class PersonalController extends Controller
      */
     public function create()
     {
-        return view ('principal');
+        //
     }
 
     /**
@@ -34,7 +46,7 @@ class PersonalController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(personal $personal)
+    public function show(personals $personals)
     {
         //
     }
@@ -42,15 +54,18 @@ class PersonalController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(personal $personal)
+    public function edit($id)
     {
-        //
+        $formato=User::findOrFail($id);
+        return view('editar', compact('formato')); 
+        
+        //Aqui se escribe el mismo nombre de la variable arriba
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, personal $personal)
+    public function update(Request $request, personals $personals)
     {
         //
     }
@@ -58,7 +73,7 @@ class PersonalController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(personal $personal)
+    public function destroy(personals $personals)
     {
         //
     }
