@@ -22,11 +22,7 @@ class PersonalsController extends Controller
         return view ('principal');
     }
 
-    public function radio()
-    {
-        return view ('radiouhf');
-    }
-
+    
     /**
      * Show the form for creating a new resource.
      */

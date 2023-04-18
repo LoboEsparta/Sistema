@@ -34,6 +34,7 @@ Route::get('/radiouhf', function () {
     return view('radiouhf')->middleware('auth');
 });
 Route::resource('radiouhf', RadiouhfsController::class)->middleware('auth');
+Route::get('/radiouhf', [App\Http\Controllers\RadiouhfsController::class, 'index'])->middleware('auth');
 
 
 

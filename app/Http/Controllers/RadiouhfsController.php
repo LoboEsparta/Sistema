@@ -131,20 +131,20 @@ class RadiouhfsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show()
     {
-        $formato=User::findOrFail($id);
-        return view('radiouhf', compact('formato')); 
         
-        //Aqui se escribe el mismo nombre de la variable arriba
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(radiouhfs $radiouhfs)
+    public function edit($id)
     {
-        //
+        $formato=User::findOrFail($id);
+        return view('radiouhf', compact('formato')); 
+        
+        //Aqui se escribe el mismo nombre de la variable arriba
     }
 
     /**

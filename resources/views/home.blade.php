@@ -43,6 +43,8 @@ crossorigin="anonymous"></script>
 </div>  
   </nav>
 
+
+
 <span> <img src="../resources/css/lista.png" id="boton" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
 aria-controls="offcanvasExample"></span>
 <div class="container">
@@ -58,7 +60,7 @@ aria-labelledby="offcanvasExampleLabel">
     <div class="">
       <ul class="">
         <li><a class="lista" href="{{ url('radiovhf')}}">VHF Radio</a></li>
-        <li><a class="lista" href="{{url ('radiouhf')}}">UHF Radio</a></li>
+        <li><a class="lista" href="{{url ('radiouhf') }}">UHF Radio</a></li>
         <li><a class="lista" href="{{ url('principal')}}">Admin</a></li>
         <li><a class="lista" href="#">Formato 4</a></li>
       </ul>
@@ -77,6 +79,14 @@ aria-labelledby="offcanvasExampleLabel">
             
             </div>
           </div>
+
+
+          <div class="row">
+            <h3>Hola tu serie es: {{ Auth::user()->serie }} </h3>
+            <h3>Hola tu modelo es: {{ Auth::user()->modelo }} </h3>
+            <h3>Hola tu Marca es: {{ Auth::user()->marca }} </h3>
+          </div>
+
 
 </div>
 

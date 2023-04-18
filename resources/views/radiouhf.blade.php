@@ -52,7 +52,7 @@ crossorigin="anonymous"></script>
 </div>  
   </nav>
 
-
+  
 
 
     <span> <img src="../resources/css/lista.png" id="boton" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
@@ -69,7 +69,7 @@ aria-labelledby="offcanvasExampleLabel">
     <div class="">
       <ul class="">
         <li><a class="lista" href="{{ url('radiovhf')}}">VHF Radio</a></li>
-        <li><a class="lista" href="{{ url('radiouhf')}}">UHF Radio</a></li>
+        <li><a class="lista" href="{{url ('radiouhf') }}">UHF Radio</a></li>
         <li><a class="lista" href="{{ url('principal')}}">Admin</a></li>
         <li><a class="lista" href="#">Formato 4</a></li>
       </ul>
@@ -78,7 +78,7 @@ aria-labelledby="offcanvasExampleLabel">
 </div>
 
 <!--                     Aqui empieza el contenido del sistema web            -->
-@foreach ($personal as $persona)
+
 <div class="container" id="contenido">
     <h3>Mantenimiento Radio UHF</h3>
     <form action= "{{ url('/radiouhf') }}" method="post" enctype="multipart/form-data">
@@ -218,9 +218,9 @@ aria-labelledby="offcanvasExampleLabel">
       </thead>
       <tbody>
         <tr>
-          <td><input type="text" name="Marca" id="cuadro" value="{{ $persona -> name }}"></td>
-          <td><input type="text" name="Modelo" id="cuadro" value="{{ $persona -> modelo }}"></td>
-          <td><input type="text" name="Serie" id="cuadro" value="{{ $persona -> serie }}"></td>
+          <td><input type="text" name="Marca" id="cuadro" value="{{ Auth::user()->marca }}"></td>
+          <td><input type="text" name="Modelo" id="cuadro" value="{{ Auth::user()->modelo }}"></td>
+          <td><input type="text" name="Serie" id="cuadro" value="{{ Auth::user()->serie }}"></td>
         </tr>
       </tbody>
     </table>
@@ -579,7 +579,7 @@ aria-labelledby="offcanvasExampleLabel">
 
 
     </form>
-@endforeach
+
   </div>
 
 
