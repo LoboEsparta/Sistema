@@ -6,7 +6,7 @@ use App\Http\Controllers\RadiovhfsController;
 use App\Http\Controllers\LoginsController;
 use App\Http\Controllers\PersonalsController;
 use App\Http\Controllers\Auth\RegisteredUserController;
-use App\Http\Controllers\MenuController;
+use App\Http\Controllers\EditarController;
 
 
 /*
@@ -67,8 +67,8 @@ Route::get('/personal', [App\Http\Controllers\PersonalsController::class, 'index
 Route::get('/editar', function () {
     return view('editar');
 });
-Route::resource('personal', PersonalsController::class)->middleware('auth');
-//Route::get('/personal', [App\Http\Controllers\PersonalsController::class, 'edit'])->middleware('can:personal') ->name('personal');
+Route::resource('editar', EditarController::class)->middleware('auth');
+Route::get('/editar', [App\Http\Controllers\EditarController::class, 'index'])->middleware('can:personal') ->name('personal');
 
 
 

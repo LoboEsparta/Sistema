@@ -313,6 +313,13 @@ ul li:hover a{
 
 <h3>Editar Información de {{ $formato -> name}}</h3>
 
+
+
+<form action="{{url ('/editar/'.$formato->id) }}" method="post">
+@csrf
+
+{{ method_field('PATCH') }}
+
 <div class="row">
     <div>
         <label for="" class="form-label">Marca:</label>
@@ -332,6 +339,23 @@ ul li:hover a{
     </div>
 </div>
 
-<button type="submit" class="btn btn-danger">Editar</button>
+<button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Editar Datos</button>
+
+
+</form>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Listoooo!!!!!</h5>
+      </div>
+      <div class="modal-body">
+        Se edito correctamente c:
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>

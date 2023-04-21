@@ -91,7 +91,7 @@ crossorigin="anonymous"></script>
       <td>{{ $persona -> modelo}}</td>
       <td>{{ $persona -> serie}}</td>
       <td>
-      <a href="{{url ('/personal/'.$persona->id.'/edit') }}">
+      <a href="{{url ('/editar/'.$persona->id.'/edit') }}">
         Editar
       </a>
       </td>

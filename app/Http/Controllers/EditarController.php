@@ -2,27 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\personals;
+use App\Models\editar;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class PersonalsController extends Controller
+class EditarController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $datosusuario['personal']=User::paginate();
-        return view('personal', $datosusuario);
+        
     }
 
-    public function ver()
-    {
-        return view ('principal');
-    }
-
-    
     /**
      * Show the form for creating a new resource.
      */
@@ -42,9 +35,9 @@ class PersonalsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(personals $personals)
+    public function show(editar $editar)
     {
-        //
+        
     }
 
     /**
@@ -52,7 +45,8 @@ class PersonalsController extends Controller
      */
     public function edit($id)
     {
-    
+        $formato=User::findOrFail($id);
+        return view('editar', compact('formato')); 
     }
 
     /**
@@ -60,13 +54,17 @@ class PersonalsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
-    }
+        $datos = request()->except(['_token','_method']);
+        User::where('id','=', $id )->update($datos);
 
+        $formato=User::findOrFail($id);
+        return view('editar', compact('formato')); 
+        //return response()->json($datos);
+    }
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(personals $personals)
+    public function destroy(editar $editar)
     {
         //
     }
