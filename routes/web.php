@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginsController;
 use App\Http\Controllers\PersonalsController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\EditarController;
+use App\Http\Controllers\RadiosController;
 
 
 /*
@@ -70,15 +71,21 @@ Route::get('/editar', function () {
 Route::resource('editar', EditarController::class)->middleware('auth');
 Route::get('/editar', [App\Http\Controllers\EditarController::class, 'index'])->middleware('can:personal') ->name('personal');
 
-
-
-
 Route::get('/vista', function () {
     return view('vista');
 });
 Route::resource('vista', LoginsController::class)->middleware('auth');
 Route::get('/vista', [App\Http\Controllers\LoginsController::class, 'index'])->middleware('can:vista') ->name('vista');
 
+
+
+
+
+
+Route::get('/radios', function () {
+    return view('radios');
+});
+Route::resource('radios', RadiosController::class)->middleware('auth');
 
 
 

@@ -81,11 +81,7 @@ aria-labelledby="offcanvasExampleLabel">
           </div>
 
 
-          <div class="row">
-            <h3>Hola tu serie es: {{ Auth::user()->serie }} </h3>
-            <h3>Hola tu modelo es: {{ Auth::user()->modelo }} </h3>
-            <h3>Hola tu Marca es: {{ Auth::user()->marca }} </h3>
-          </div>
+          
 
 
 </div>

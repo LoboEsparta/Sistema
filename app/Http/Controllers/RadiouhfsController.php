@@ -67,6 +67,7 @@ class RadiouhfsController extends Controller
             'Bateria',
             'Respaldo',
             'Tierras',
+            'VoBo',
             '_token'
         );
     

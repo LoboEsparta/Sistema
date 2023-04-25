@@ -150,6 +150,16 @@ crossorigin="anonymous"></script>
                             </div>
                         </div>
 
+                        <div class="row mb-3">
+                            <label for="rpe" class="col-md-4 col-form-label text-md-end">{{ __('R.P.E') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="rpe" type="text" class="form-control @error('rpe') is-invalid @enderror" name="rpe" required autocomplete="rpe">
+
+                        
+                            </div>
+                        </div>
+
 
 
                         

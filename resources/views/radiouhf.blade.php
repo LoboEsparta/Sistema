@@ -92,7 +92,7 @@ aria-labelledby="offcanvasExampleLabel">
       <div>
         <label for="" class="form-label">Area/Gerencia</label>
         <input type="hidden" value="UHF" name="tipo">
-        <input type="text" name="area" class="form-control" placeholder="Area/Gerencia">
+        <input type="text" name="area" class="form-control" placeholder="Area/Gerencia" required>
       </div>
     </div>
     <div class="row text-center" >
@@ -190,19 +190,19 @@ aria-labelledby="offcanvasExampleLabel">
         <div>
           <label for="" class="form-label">ECO/Ubicación</label>
           <!--ByJesusHilarioJuarezOrtiz-->
-          <input type="text" name="Ubicacion" class="form-control" placeholder="ECO/Ubicación">
+          <input type="text" name="Ubicacion" class="form-control" placeholder="ECO/Ubicación" required>
         </div>
         <div>
           <label for="" class="form-label">Responsable</label>
-          <input type="text" name="Responsable" class="form-control" placeholder="Responsable">
+          <input type="text" name="Responsable" class="form-control" placeholder="Responsable" required>
         </div>
         <div>
           <label for="" class="form-label">Nombre/Agencia/Oficina</label>
-          <input type="text" name="Oficina" class="form-control" placeholder="Nombre/Agencia/Oficina">
+          <input type="text" name="Oficina" class="form-control" placeholder="Nombre/Agencia/Oficina" required>
         </div>
         <div>
           <label for="" class="form-label">RPE/Dirección</label>
-          <input type="text" name="Direccion" class="form-control" placeholder="RPE/Dirección">
+          <input type="text" name="Direccion" class="form-control" placeholder="RPE/Dirección" required>
         </div>
       </div>
     </div>
@@ -230,67 +230,67 @@ aria-labelledby="offcanvasExampleLabel">
      <div class="col">
       <div class="form-floating mb-3">
         <p id="final">DBM</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="Potencia DBM:" name="Potencia">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Potencia DBM:" name="Potencia" required>
         <label for="floatingInput">Potencia:</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">WATTS</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="Reflejo" name="Reflejo">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Reflejo" name="Reflejo" required>
         <label for="floatingInput">Reflejo:</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">KHZ</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="Modulación" name="Modulacion">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Modulación" name="Modulacion" required>
         <label for="floatingInput">Modulación:</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">DBM</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Sensibilidad">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Sensibilidad" required>
         <label for="floatingInput">Sensibilidad:</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">KHZ</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Frec">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Frec" required>
         <label for="floatingInput">Error Frec:</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">DBM</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Señal">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Señal" required>
         <label for="floatingInput">Nivel Señal RX:</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">c.a</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="RX">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="RX" required>
         <label for="floatingInput">Vpp RX:</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">c.a</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Tx">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Tx" required>
         <label for="floatingInput">Vpp TX:</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">VCA</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="VCA">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="VCA" required>
         <label for="floatingInput">Alimentación VCA:</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">VCD</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="VCD">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="VCD" required>
         <label for="floatingInput">Alimentación VCD</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">VCD</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Cargador">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Cargador" required>
         <label for="floatingInput">Cargador de BAT:</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">VCD</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Banco">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Banco" required>
         <label for="floatingInput">Banco de BAT:</label>
       </div>
       <div class="form-floating mb-3">
         <p id="final">CA</p>
-        <input type="text" class="form-control" id="floatingInput" placeholder="Inversor" name="Inversor">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Inversor" name="Inversor" required>
         <label for="floatingInput">Inversor:</label>
       </div>
       
@@ -300,11 +300,11 @@ aria-labelledby="offcanvasExampleLabel">
     <div class="row text-center">
       <div class="col">
         <label for="" class="form-label">Valor de Tierras</label>
-        <input type="text" class="form-control" placeholder="Ohmio u Ohm" name="Tierras">
+        <input type="text" class="form-control" placeholder="Ohmio u Ohm" name="Tierras" required>
       </div>
       <div class="col">
         <label for="" class="form-label">Tiempo de Respaldo</label>
-        <input type="text" class="form-control" placeholder="Minutos" name="Respaldo">
+        <input type="text" class="form-control" placeholder="Minutos" name="Respaldo" required>
       </div>
     </div>
 
@@ -323,9 +323,9 @@ aria-labelledby="offcanvasExampleLabel">
         <tbody>
           <tr>
             <td>Antena</td>
-            <td id="tabla"><input class="form-check-input" id="tabla" type="radio" value="B" name="Antena"></td>
-            <td id="tabla"><input class="form-check-input" id="tabla" type="radio" value="D" name="Antena"></td>
-            <td id="tabla"><input class="form-check-input" id="tabla" type="radio" value="C" name="Antena"></td>
+            <td id="tabla"><input class="form-check-input" id="tabla" type="radio" value="B" name="Antena" required></td>
+            <td id="tabla"><input class="form-check-input" id="tabla" type="radio" value="D" name="Antena" required></td>
+            <td id="tabla"><input class="form-check-input" id="tabla" type="radio" value="C" name="Antena" required></td>
             <td><input placeholder="Escribe aqui..." id="cuadro" name="tabla1"></input></td>
           </tr>
           <tr>
@@ -523,12 +523,12 @@ aria-labelledby="offcanvasExampleLabel">
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text">Inspecciono: </span>
-          <input type="text" class="form-control" aria-label="" name="inspecciono">
+          <input type="text" class="form-control" aria-label="" name="inspecciono" required>
         </div>
         
         <div class="input-group mb-3">
           <span class="input-group-text">R.P.E</span>
-          <input type="text" class="form-control" placeholder="R.P.E" aria-label="RPE" name="rpe">
+          <input type="text" class="form-control" placeholder="R.P.E" aria-label="RPE" name="rpe" required>
           <span class="input-group-text">Firma</span>
           <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" name="usuario" value="{{ Auth::user()->name }}" disabled>
         </div>
@@ -539,7 +539,7 @@ aria-labelledby="offcanvasExampleLabel">
       <div class="col">
         <div class="input-group mb-3">
           <span class="input-group-text">Vo. Bo.</span>
-          <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" name="usuario">
+          <input type="text" class="form-control" placeholder="VoBo" aria-label="VoBo" name="VoBo" required>
         </div>
       </div>
     </div>
@@ -567,7 +567,7 @@ aria-labelledby="offcanvasExampleLabel">
     <div class="row">
       <div class="col"></div>
       <div class="col text-center">
-        <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModal">Enviar</button>
+        <button class="btn btn-primary" type="submit" >Enviar</button>
       </div>
       <div class="col"></div>
     </div>

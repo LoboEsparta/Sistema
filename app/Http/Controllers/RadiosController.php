@@ -2,29 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\personals;
 use App\Models\radios;
-use App\Models\User;
 use Illuminate\Http\Request;
 
-class PersonalsController extends Controller
+class RadiosController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $datosusuario['personal']=User::paginate();
-        $datosradios['radios']=radios::paginate();
-        return view('personal', $datosusuario,$datosradios);
+        return view ("radios");
     }
 
-    public function ver()
-    {
-        return view ('principal');
-    }
-
-    
     /**
      * Show the form for creating a new resource.
      */
@@ -38,13 +28,17 @@ class PersonalsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datos = request()->except('_token');
+    
+            radios::insert($datos);
+            //return response()->json($datos);
+            return view('principal');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(personals $personals)
+    public function show(radios $radios)
     {
         //
     }
@@ -52,23 +46,23 @@ class PersonalsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(radios $radios)
     {
-    
+        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, radios $radios)
     {
-        
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(personals $personals)
+    public function destroy(radios $radios)
     {
         //
     }

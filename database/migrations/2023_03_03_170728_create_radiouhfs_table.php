@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('radiouhfs', function (Blueprint $table) {
             $table->id();
            
-            $table->string('area')->nullable();
-            $table->string('tipo')->nullable();
+            $table->string('area');
+            $table->string('tipo');
 
             $table->date('fecha')->nullable();
 
@@ -26,28 +26,28 @@ return new class extends Migration
 
             $table->string('Mantenimiento')->nullable();
 
-            $table->string('Ubicacion')->nullable();
-            $table->string('Responsable')->nullable();
-            $table->string('Oficina')->nullable();
-            $table->string('Direccion')->nullable();
+            $table->string('Ubicacion');
+            $table->string('Responsable');
+            $table->string('Oficina');
+            $table->string('Direccion');
 
             $table->string('Marca')->nullable();
             $table->string('Modelo')->nullable();
             $table->string('Serie')->nullable();
 
-            $table->string('Potencia')->nullable();
-            $table->string('Reflejo')->nullable();
-            $table->string('Modulacion')->nullable();
-            $table->string('Sensibilidad')->nullable();
-            $table->string('Frec')->nullable();
-            $table->string('Señal')->nullable();
-            $table->string('RX')->nullable();
-            $table->string('Tx')->nullable();
-            $table->string('VCA')->nullable();
-            $table->string('VCD')->nullable();
-            $table->string('Cargador')->nullable();
-            $table->string('Banco')->nullable();
-            $table->string('Inversor')->nullable(); 
+            $table->string('Potencia');
+            $table->string('Reflejo');
+            $table->string('Modulacion');
+            $table->string('Sensibilidad');
+            $table->string('Frec');
+            $table->string('Señal');
+            $table->string('RX');
+            $table->string('Tx');
+            $table->string('VCA');
+            $table->string('VCD');
+            $table->string('Cargador');
+            $table->string('Banco');
+            $table->string('Inversor'); 
             
             $table->string('Foto')->nullable();
             $table->string('Fotodos')->nullable();

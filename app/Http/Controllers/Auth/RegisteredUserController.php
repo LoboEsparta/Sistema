@@ -19,6 +19,7 @@ class RegisteredUserController extends Controller
             'marca' => ['required', 'string', 'max:255'],
             'modelo' => ['required', 'string', 'max:255'],
             'serie' => ['required', 'string', 'max:255'],
+            'rpe' => ['required', 'string', 'max:255'],
         ]);
 
         User::create([
@@ -28,6 +29,7 @@ class RegisteredUserController extends Controller
             'marca' => $request['marca'],
             'modelo' => $request['modelo'],
             'serie' => $request['serie'],
+            'rpe' => $request['rpe'],
         ]);
 
         //$datos = request()->except(

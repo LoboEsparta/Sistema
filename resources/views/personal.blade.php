@@ -62,11 +62,11 @@ crossorigin="anonymous"></script>
 <div class="row">
   <div class="col text-end">
     <a href="{{ url('registro') }}" id="registro" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-      Registro de Personal</a>
+      Registro de Equipo</a>
   </div>
 </div>
 
-
+<h3>Listado de Equipo</h3>
 <div class="row">
     <div class="col">
     <table class="table table-striped border-dark text-center">
@@ -102,6 +102,50 @@ crossorigin="anonymous"></script>
 
     </div>
 </div>
+
+
+<div class="row">
+  <div class="col text-end">
+    <a href="{{ url('radios') }}" id="registro" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+      Registro de Radios</a>
+  </div>
+</div>
+<h3>Radios Listado</h3>
+<div class="row">
+    <div class="col">
+    <table class="table table-striped border-dark text-center">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Serie</th>
+      <th>Editar</th>
+    </tr>
+  </thead>
+  @foreach ($radios as $radio)
+  <tbody>
+    <tr>
+      <th scope="row">{{ $radio -> id}}</th>
+      <td>{{ $radio -> Marca }}</td>
+      <td>{{ $radio -> Modelo}}</td>
+      <td>{{ $radio -> Serie}}</td>
+      <td>
+      <a href="{{url ('/editar/'.$persona->id.'/edit') }}">
+        Editar
+      </a>
+      </td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
+
+    </div>
+</div>
+
+
+
+
 
 
   <!--ByJesusHilarioJuarezOrtiz-->

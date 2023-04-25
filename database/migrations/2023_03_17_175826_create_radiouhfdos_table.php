@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('radiouhfdos', function (Blueprint $table) {
             $table->id();
 
-            $table->string('Tierras')->nullable();
-            $table->string('Respaldo')->nullable();
+            $table->string('Tierras');
+            $table->string('Respaldo');
 
-            $table->string('Antena')->nullable();
+            $table->string('Antena');
             $table->string('tabla1')->nullable();
             $table->string('Cable')->nullable();
             $table->string('tabla2')->nullable();
@@ -47,10 +47,10 @@ return new class extends Migration
             $table->string('tabla14')->nullable();
             
             $table->string('textarea')->nullable();
-            $table->string('inspecciono')->nullable();
-            $table->string('rpe')->nullable();
+            $table->string('inspecciono');
+            $table->string('rpe');
             $table->string('usuario')->nullable();
-            $table->string('VoBo')->nullable();
+            $table->string('VoBo');
 
 
 
