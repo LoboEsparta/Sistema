@@ -121,7 +121,7 @@ class RadiouhfsController extends Controller
             radiouhfdos::insert($datos2);
             radiouhfs::insert($datos);
             //return response()->json($datos2);
-            return view('radiouhf');
+            return view('home');
 
 
 

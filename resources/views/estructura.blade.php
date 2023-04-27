@@ -618,20 +618,16 @@ ul li:hover a{
           <span class="input-group-text">R.P.E</span>
           <input type="text" class="form-control" aria-label="RPE" name="rpe" value="{{ $formatito-> rpe }}" disabled>
           <span class="input-group-text">Firma</span>
-          <input type="text" class="form-control" value=" {{ Auth::user()->name }}" aria-label="Username" disabled>
+          <input type="text" class="form-control" value=" {{ $formatito->usuario }}" aria-label="Username" disabled name="usuario">
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col">
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Historial del equipo: </label>
-          <textarea class="form-control" rows="3" name="textoarea" value="{{$formatito-> textoarea}}" disabled>{{$formato-> textoarea}}</textarea>
-        </div>
         <div class="input-group mb-3">
           <span class="input-group-text">Vo. Bo.</span>
-          <input type="text" class="form-control" rows="3" value="{{$formatito-> usuario}}" disabled aria-label="Usuario" name="usuario">
+          <input type="text" class="form-control" rows="3" value="{{$formatito-> VoBo}}" disabled aria-label="Usuario" name="VoBo">
         </div>
       </div>
     </div>

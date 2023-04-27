@@ -75,9 +75,7 @@ crossorigin="anonymous"></script>
       <th>#</th>
       <th>Nombre</th>
       <th>UserName</th>
-      <th>Marca</th>
-      <th>Modelo</th>
-      <th>Serie</th>
+      <th>R.P.E</th>
       <th>Editar</th>
     </tr>
   </thead>
@@ -87,8 +85,6 @@ crossorigin="anonymous"></script>
       <th scope="row">{{ $persona -> id}}</th>
       <td>{{ $persona -> name }}</td>
       <td>{{ $persona -> username}}</td>
-      <td>{{ $persona -> marca}}</td>
-      <td>{{ $persona -> modelo}}</td>
       <td>{{ $persona -> serie}}</td>
       <td>
       <a href="{{url ('/editar/'.$persona->id.'/edit') }}">
@@ -103,14 +99,23 @@ crossorigin="anonymous"></script>
     </div>
 </div>
 
-
+<!--
 <div class="row">
   <div class="col text-end">
     <a href="{{ url('radios') }}" id="registro" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
       Registro de Radios</a>
   </div>
 </div>
+
+
+
+
+
+
 <h3>Radios Listado</h3>
+
+
+
 <div class="row">
     <div class="col">
     <table class="table table-striped border-dark text-center">
@@ -131,7 +136,7 @@ crossorigin="anonymous"></script>
       <td>{{ $radio -> Modelo}}</td>
       <td>{{ $radio -> Serie}}</td>
       <td>
-      <a href="{{url ('/editar/'.$persona->id.'/edit') }}">
+      <a href="{{url ('/editar/'.$radio->id.'/edit') }}">
         Editar
       </a>
       </td>
@@ -142,7 +147,7 @@ crossorigin="anonymous"></script>
 
     </div>
 </div>
-
+-->
 
 
 

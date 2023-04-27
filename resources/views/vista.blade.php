@@ -19,6 +19,14 @@ crossorigin="anonymous"></script>
 
     </head>
 
+    <style>
+
+      #formulario{
+        float: right;
+      }
+
+    </style>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container-fluid">
    <a class="navbar-brand" href="{{ url('/home')}}">Comisión Federal de Electricidad</a>
@@ -60,15 +68,25 @@ crossorigin="anonymous"></script>
 
 
 
-    <div class="row text-center">
+    <div class="row">
     <h4>Listado de Radios UHF</h4>
       <div class="row">
         <div class="col">
+
+        <form class="form-inline my-2 my-lg-0 row" id="formulario" role="search">
+          <div class="col-auto">
+          <input name="buscarpor" class="form-control" type="search" placeholder="Buscar" aria-label="Search" value="{{ $buscarpor }}">
+          </div>
+          <div class="col-auto">
+          <button class="btn btn-success" type="submit">Buscar</button>
+          </div>
+      </form>
+
           <table class="table">
   <thead>
     <tr>
         <th>id</th>
-      <th scope="col">Formato</th>
+      <th scope="col">Radio Serie</th>
       <th scope="col">Fecha</th>
       <th scope="col">Area</th>
       <th scope="col">ECO/Ubicación</th>
@@ -76,12 +94,12 @@ crossorigin="anonymous"></script>
     </tr>
   </thead>
   <tbody>
-    @foreach ($datos as $dato)
+    @foreach ($datosvista as $dato)
     <tr>
       <td> {{$dato->id}} </td>
-      <td>Formato No. {{$dato->id}} Radio Serie: {{$dato->Serie}}</td>
+      <th>Radio Serie: {{$dato->Serie}}</th>
       <td>{{$dato->fecha}}</td>
-      <th>{{$dato->area}}</th>
+      <td>{{$dato->area}}</td>
       <td>{{$dato->Ubicacion}}</td>
             <!--<td> <img src="{{ asset('storage').'/'. $dato->Foto }}" alt="200" width="200"> </td>-->
 
@@ -108,22 +126,32 @@ crossorigin="anonymous"></script>
     <h4>Listado de Radios VHF</h4>
       <div class="row">
         <div class="col">
+
+        <form class="form-inline my-2 my-lg-0 row" id="formulario" role="search">
+          <div class="col-auto">
+          <input name="buscar" class="form-control" type="search" placeholder="Buscar" aria-label="Search" value="{{ $buscar }}">
+          </div>
+          <div class="col-auto">
+          <button class="btn btn-success" type="submit">Buscar</button>
+          </div>
+      </form>
+      <br>
+
           <table class="table">
           <thead>
     <tr>
         <th>id</th>
-      <th scope="col">Formato</th>
+      <th scope="col">Radio Serie</th>
       <th scope="col">Fecha</th>
       <th scope="col">Area</th>
       <th scope="col">ECO/Ubicación</th>
       <th scope="col">Ver formato</th>
     </tr>
   </thead>
-  
-@foreach ($obtener as $tener)
+  @foreach ($obtener as $tener)
     <tr>
       <td> {{$tener->id}} </td>
-      <td>Formato No. {{$tener->id}} Radio Serie: {{$tener->Serie}}</td>
+      <th>Radio Serie: {{$tener->Serie}}</th>
       <td>{{$tener->fecha}}</td>
       <td>{{$tener->area}}</td>
       <td>{{$tener->Ubicacion}}</td>
@@ -139,10 +167,20 @@ crossorigin="anonymous"></script>
   </tbody>
 
 
+
 </table>
         
       </div>
     </div>
+
+    <br>
+    <br>
+    <br>
+<div class="row">
+
+</div>
+<div class="row"></div>
+
   </body>
 
 

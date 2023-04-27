@@ -16,20 +16,14 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string','max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'marca' => ['required', 'string', 'max:255'],
-            'modelo' => ['required', 'string', 'max:255'],
             'serie' => ['required', 'string', 'max:255'],
-            'rpe' => ['required', 'string', 'max:255'],
         ]);
 
         User::create([
             'name' => $request['name'],
             'username' => $request['username'],
             'password' => Hash::make($request['password']),
-            'marca' => $request['marca'],
-            'modelo' => $request['modelo'],
             'serie' => $request['serie'],
-            'rpe' => $request['rpe'],
         ]);
 
         //$datos = request()->except(

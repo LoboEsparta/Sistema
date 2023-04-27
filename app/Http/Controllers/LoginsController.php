@@ -13,11 +13,14 @@ class LoginsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    const PAGINACION = 10;
+    public function index(Request $request)
     {
-        $datosvista['datos']=radiouhfs::paginate(10);
-        $obtener['obtener']=radiovhfs::paginate(10);
-        return view('vista', $datosvista, $obtener);
+        $buscarpor = $request->get('buscarpor');
+        $datosvista = radiouhfs::where('tipo','=','UHF')->where('Serie','like','%'.$buscarpor.'%')->paginate($this::PAGINACION);
+        $buscar = $request->get('buscar');
+        $obtener = radiovhfs::where('tipo','=','VHF')->where('Serie','like','%'.$buscar.'%')->paginate($this::PAGINACION);
+        return view('vista', compact('datosvista','buscarpor','buscar','obtener'));
        
 
     }

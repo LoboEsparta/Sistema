@@ -65,6 +65,7 @@ class RadiovhfsController extends Controller
             'Bateria',
             'Respaldo',
             'Tierras',
+            'VoBo',
             '_token'
         );
     
@@ -118,7 +119,7 @@ class RadiovhfsController extends Controller
             radiovhfdos::insert($datos2);
             radiovhfs::insert($datos);        
             //return response()->json($datos);
-            return view('radiovhf');
+            return view('home');
     }
 
     /**

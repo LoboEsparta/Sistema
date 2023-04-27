@@ -49,7 +49,7 @@ return new class extends Migration
             $table->string('textarea')->nullable();
             $table->string('inspecciono');
             $table->string('rpe');
-            $table->string('usuario')->nullable();
+            $table->string('usuario');
             $table->string('VoBo');
 
 

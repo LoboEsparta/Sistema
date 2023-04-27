@@ -54,7 +54,9 @@ class PersonalsController extends Controller
      */
     public function edit($id)
     {
-    
+        $formatito=radios::findOrFail($id);
+        $formato=User::findOrFail($id);
+        return view('editar', compact('formato')); 
     }
 
     /**

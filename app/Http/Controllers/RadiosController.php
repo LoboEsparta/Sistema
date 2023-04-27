@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\radios;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class RadiosController extends Controller
 {

@@ -211,16 +211,16 @@ aria-labelledby="offcanvasExampleLabel">
     <table class="table table-bordered">
       <thead>
         <tr>
+          <th scope="col">Serie</th>
           <th scope="col">Marca</th>
           <th scope="col">Modelo</th>
-          <th scope="col">Serie</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><input type="text" name="Marca" id="cuadro" value="{{ Auth::user()->marca }}"></td>
-          <td><input type="text" name="Modelo" id="cuadro" value="{{ Auth::user()->modelo }}"></td>
-          <td><input type="text" name="Serie" id="cuadro" value="{{ Auth::user()->serie }}"></td>
+          <td><input type="text" name="Serie" id="cuadro" placeholder="Serie" required></td>
+          <td><input type="text" name="Marca" id="cuadro" placeholder="Marca" required></td>
+          <td><input type="text" name="Modelo" id="cuadro" placeholder="Modelo" required></td>
         </tr>
       </tbody>
     </table>
@@ -528,9 +528,9 @@ aria-labelledby="offcanvasExampleLabel">
         
         <div class="input-group mb-3">
           <span class="input-group-text">R.P.E</span>
-          <input type="text" class="form-control" placeholder="R.P.E" aria-label="RPE" name="rpe" required>
+          <input type="text" class="form-control" placeholder="R.P.E" aria-label="RPE" name="rpe" value="{{ Auth::user()->serie }}" readonly>
           <span class="input-group-text">Firma</span>
-          <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" name="usuario" value="{{ Auth::user()->name }}" disabled>
+          <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" name="usuario" value="{{ Auth::user()->name }}" readonly>
         </div>
       </div>
     </div>
@@ -581,25 +581,6 @@ aria-labelledby="offcanvasExampleLabel">
     </form>
 
   </div>
-
-
-
-</div>
-  <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Listoooo!!!!!</h5>
-      </div>
-      <div class="modal-body">
-        Se envio tu archivo correctamente c:
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
 
 
