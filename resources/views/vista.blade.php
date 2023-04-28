@@ -116,6 +116,7 @@ crossorigin="anonymous"></script>
 
 
 </table>
+{{ $datosvista-> links()}}
 </div>
 </div>
 </div>
@@ -169,7 +170,7 @@ crossorigin="anonymous"></script>
 
 
 </table>
-        
+{{ $obtener-> links()}}     
       </div>
     </div>
 

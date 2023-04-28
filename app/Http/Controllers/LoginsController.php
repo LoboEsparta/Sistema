@@ -13,7 +13,7 @@ class LoginsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    const PAGINACION = 10;
+    const PAGINACION = 15;
     public function index(Request $request)
     {
         $buscarpor = $request->get('buscarpor');

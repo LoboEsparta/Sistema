@@ -99,7 +99,7 @@ crossorigin="anonymous"></script>
     </div>
 </div>
 
-<!--
+
 <div class="row">
   <div class="col text-end">
     <a href="{{ url('radios') }}" id="registro" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
@@ -147,7 +147,7 @@ crossorigin="anonymous"></script>
 
     </div>
 </div>
--->
+
 
 
 
