@@ -5,12 +5,14 @@
         <script src="build/assets/app-4c85f5d2.js"></script>
         <link rel="stylesheet" href="build/assets/app.css">
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        @vite( 'resources/css/app.css')
         <title>Principal</title>
 
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
  crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
@@ -97,6 +99,10 @@ aria-labelledby="offcanvasExampleLabel">
 </a>
 
 </div>
+
+
+
+
 
 
 

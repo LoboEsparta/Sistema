@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\radiouhfs;
 use App\Models\radiouhfdos;
+use App\Models\radios;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,27 @@ class RadiouhfsController extends Controller
     public function index()
     {
         $datosusuario['personal']=User::paginate();
-        return view('radiouhf', $datosusuario);
+        $prod = radios::all();
+        //return view('radiouhf', $datosusuario,);
+        return view ('radiouhf', compact('prod','datosusuario'));
     }
+
+    public function findmarca ( Request $request)
+    {
+        $p = radios::select('Marca')->where('Serie',$request
+        ->id)->first();
+        return response()->json($p);
+    }
+
+    public function findmodelo ( Request $request)
+    {
+        $p = radios::select('Modelo')->where('Serie',$request
+        ->id)->first();
+        return response()->json($p);
+    }
+
+
+
 
     /**
      * Show the form for creating a new resource.

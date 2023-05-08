@@ -36,6 +36,8 @@ Route::get('/radiouhf', function () {
 });
 Route::resource('radiouhf', RadiouhfsController::class)->middleware('auth');
 Route::get('/radiouhf', [App\Http\Controllers\RadiouhfsController::class, 'index'])->middleware('auth');
+Route::get('/findmarca', [App\Http\Controllers\RadiouhfsController::class, 'findmarca'])->middleware('auth');
+Route::get('/findmodelo', [App\Http\Controllers\RadiouhfsController::class, 'findmodelo'])->middleware('auth');
 
 
 
@@ -55,6 +57,7 @@ Route::get('/principal', function () {
     return view('principal');
 });
 Route::get('/principal', [App\Http\Controllers\PersonalsController::class, 'ver'])->middleware('can:principal') ->name('principal');
+
 
 
 

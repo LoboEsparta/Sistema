@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class radios extends Model
 {
     use HasFactory;
+    protected $table = 'radios';
 }

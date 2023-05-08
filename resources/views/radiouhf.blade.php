@@ -18,7 +18,9 @@
 
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
  crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
@@ -207,24 +209,97 @@ aria-labelledby="offcanvasExampleLabel">
       </div>
     </div>
 
-    <div class="row text-center" id="bordes">          
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th scope="col">Serie</th>
-          <th scope="col">Marca</th>
-          <th scope="col">Modelo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input type="text" name="Serie" id="cuadro" placeholder="Serie" required></td>
-          <td><input type="text" name="Marca" id="cuadro" placeholder="Marca" required></td>
-          <td><input type="text" name="Modelo" id="cuadro" placeholder="Modelo" required></td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
+    <Style>
+  #titulo{
+    font-size: 20px
+  }
+  #marco{
+    border: .5px;
+    border-style: solid;
+    border-color: rgb(223 223 223);
+  }
+</Style>
+
+<div class="row text-center">
+<span>Realiza tu busqueda por el numero de Serie y espera 5 segundos mientras se hace tu busqueda</span>
+</div>
+
+    <div class="row text-center" id="marco">
+  <div class="col">
+
+    <span id="titulo"> Serie: </span>
+    <input class="Serie" style="width: 250px" name="Serie" placeholder="Escribe aqui el numero de Serie" id="cuadro">
+
+    <span id="titulo"> Marca: </span>
+    <input class="Marca" style="width: 250px" name="Marca" readonly placeholder="Marca" id="cuadro">
+
+    <span id="titulo"> Modelo: </span>
+    <input class="Modelo" style="width: 250px" name="Modelo" readonly placeholder="Modelo" id="cuadro">
+
+
+
+</div>
+</div>
+
+
+    <script type="text/javascript">
+
+$(document).on('keyup','.Serie',function () {
+			var prod_id=$(this).val();
+
+			var a=$(this).parent();
+			console.log(prod_id + " Prueba de marca");
+			var op="";
+			$.ajax({
+				type:'get',
+				url:'{!!URL::to('findmarca')!!}',
+				data:{'id':prod_id},
+				dataType:'json',
+				success:function(data){
+					console.log(" Abajo la marca");
+					console.log(data.Marca + "Que guarda la variable"); 
+					a.find('.Marca').val(data.Marca);
+
+				},
+				error:function(){
+
+				}
+			});
+    });
+
+
+  
+
+
+$(document).on('keyup','.Serie',function () {
+			var prod_id=$(this).val();
+
+			var a=$(this).parent();
+			console.log(prod_id + " Prueba de modelo");
+			var op="";
+			$.ajax({
+				type:'get',
+				url:'{!!URL::to('findmodelo')!!}',
+				data:{'id':prod_id},
+				dataType:'json',
+				success:function(data){
+					console.log(" Abajo la el Modelo");
+					console.log(data.Modelo); 
+					a.find('.Modelo').val(data.Modelo);
+
+				},
+				error:function(){
+
+				}
+			});
+    });
+
+
+
+
+</script>
+
+
 
     <div class="row">
      <div class="col">

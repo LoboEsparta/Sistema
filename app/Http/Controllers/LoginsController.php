@@ -13,7 +13,7 @@ class LoginsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    const PAGINACION = 15;
+    const PAGINACION = 10;
     public function index(Request $request)
     {
         $buscarpor = $request->get('buscarpor');
@@ -21,7 +21,7 @@ class LoginsController extends Controller
         $buscar = $request->get('buscar');
         $obtener = radiovhfs::where('tipo','=','VHF')->where('Serie','like','%'.$buscar.'%')->paginate($this::PAGINACION);
         return view('vista', compact('datosvista','buscarpor','buscar','obtener'));
-       
+        
 
     }
 
