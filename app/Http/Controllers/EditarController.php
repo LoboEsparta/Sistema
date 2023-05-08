@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\editar;
 use App\Models\User;
+use App\Models\radios;
 use Illuminate\Http\Request;
 
 class EditarController extends Controller
@@ -45,7 +46,7 @@ class EditarController extends Controller
      */
     public function edit($id)
     {
-        $formato=User::findOrFail($id);
+        $formato=radios::findOrFail($id);
         return view('editar', compact('formato')); 
     }
 

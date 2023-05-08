@@ -17,7 +17,10 @@ return new class extends Migration
             $table->string("Marca");
             $table->string("Modelo");
             $table->string("Serie");
-
+            $table->string("Economico");
+            $table->string("Responsable");
+            $table->string("Oficina");
+            $table->string("rpe");
 
             $table->timestamps();
         });

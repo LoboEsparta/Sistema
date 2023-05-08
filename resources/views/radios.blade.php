@@ -64,7 +64,24 @@ crossorigin="anonymous"></script>
                         <label for="Serie" class="form-label">Serie:</label>
                         <input type="text" class="form-control" id="Serie" placeholder="Serie" name="Serie" required>
                         </div>
+                        <div class="mb-3">
+                        <label for="Serie" class="form-label">No.Economico:</label>
+                        <input type="text" class="form-control" id="Serie" placeholder="No.Economico" name="Economico" required>
+                        </div>
+                        <div class="mb-3">
+                        <label for="Serie" class="form-label">Nombre de responsable del equipo:</label>
+                        <input type="text" class="form-control" id="Serie" placeholder="responsable del equipo" name="Responsable" required>
+                        </div>
+                        <div class="mb-3">
+                        <label for="Serie" class="form-label">RPE:</label>
+                        <input type="text" class="form-control" id="Serie" placeholder="RPE" name="rpe" required>
+                        </div>
 
+                        <div class="mb-3">
+                        <label for="Serie" class="form-label">Nombre/Agencia/Oficina::</label>
+                        <input type="text" class="form-control" id="Serie" placeholder="Nombre/Agencia/Oficina" name="Oficina" required>
+                        </div>
+                        
 
                         <div class="row mb-0">
                             <div class="">

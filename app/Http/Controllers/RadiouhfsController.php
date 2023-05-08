@@ -23,14 +23,14 @@ class RadiouhfsController extends Controller
 
     public function findmarca ( Request $request)
     {
-        $p = radios::select('Marca')->where('Serie',$request
+        $p = radios::select('Marca','Serie','Responsable')->where('Economico',$request
         ->id)->first();
         return response()->json($p);
     }
 
     public function findmodelo ( Request $request)
     {
-        $p = radios::select('Modelo')->where('Serie',$request
+        $p = radios::select('Modelo','Oficina','rpe')->where('Economico',$request
         ->id)->first();
         return response()->json($p);
     }

@@ -184,31 +184,8 @@ aria-labelledby="offcanvasExampleLabel">
       </div>
 
       
+      
     
-
-    <div class="row">
-      <h5>Datos</h5>
-      <div class="col">
-        <div>
-          <label for="" class="form-label">ECO/Ubicación</label>
-          <!--ByJesusHilarioJuarezOrtiz-->
-          <input type="text" name="Ubicacion" class="form-control" placeholder="ECO/Ubicación" required>
-        </div>
-        <div>
-          <label for="" class="form-label">Responsable</label>
-          <input type="text" name="Responsable" class="form-control" placeholder="Responsable" required>
-        </div>
-        <div>
-          <label for="" class="form-label">Nombre/Agencia/Oficina</label>
-          <input type="text" name="Oficina" class="form-control" placeholder="Nombre/Agencia/Oficina" required>
-        </div>
-        <div>
-          <label for="" class="form-label">RPE/Dirección</label>
-          <input type="text" name="Direccion" class="form-control" placeholder="RPE/Dirección" required>
-        </div>
-      </div>
-    </div>
-
     <Style>
   #titulo{
     font-size: 20px
@@ -221,22 +198,35 @@ aria-labelledby="offcanvasExampleLabel">
 </Style>
 
 <div class="row text-center">
-<span>Realiza tu busqueda por el numero de Serie y espera 5 segundos mientras se hace tu busqueda</span>
+<h5>Datos</h5>
+<span>Realiza tu busqueda por el numero Economico y espera 5 segundos mientras se hace tu busqueda</span><br>
 </div>
 
-    <div class="row text-center" id="marco">
+<div class="row text-center" id="marco">
+  
   <div class="col">
-
+  <br>
+  <label for="" class="form-label" id="titulo" >ECO/Ubicación:</label>
+          <!--ByJesusHilarioJuarezOrtiz-->
+          <input type="text" name="Ubicacion" class="Economico form-control" placeholder="ECO/Ubicación" required><br>
+          <label for="" id="titulo" class="form-label">Responsable del equipo:</label>
+          <input type="text" name="Responsable" class="Responsable form-control" readonly placeholder="Responsable" required>
+          <label for="" id="titulo" class="form-label">Nombre/Agencia/Oficina:</label>
+          <input type="text" name="Oficina" class="Oficina form-control" readonly placeholder="Nombre/Agencia/Oficina" required>
+          <label for="" id="titulo" class="form-label">RPE/Dirección:</label>
+          <input type="text" name="Direccion" class="rpe form-control" readonly placeholder="RPE/Dirección" required>
+        
+<br>
     <span id="titulo"> Serie: </span>
-    <input class="Serie" style="width: 250px" name="Serie" placeholder="Escribe aqui el numero de Serie" id="cuadro">
+    <input class="Serie" style="width: 250px" name="Serie" readonly placeholder="Escribe aqui el numero de Serie" id="cuadro">
 
     <span id="titulo"> Marca: </span>
     <input class="Marca" style="width: 250px" name="Marca" readonly placeholder="Marca" id="cuadro">
 
     <span id="titulo"> Modelo: </span>
-    <input class="Modelo" style="width: 250px" name="Modelo" readonly placeholder="Modelo" id="cuadro">
+    <input class="Modelo" style="width: 250px" name="Modelo" readonly placeholder="Modelo" id="cuadro"><br>
 
-
+<br>
 
 </div>
 </div>
@@ -244,7 +234,7 @@ aria-labelledby="offcanvasExampleLabel">
 
     <script type="text/javascript">
 
-$(document).on('keyup','.Serie',function () {
+$(document).on('keyup','.Economico',function () {
 			var prod_id=$(this).val();
 
 			var a=$(this).parent();
@@ -259,6 +249,8 @@ $(document).on('keyup','.Serie',function () {
 					console.log(" Abajo la marca");
 					console.log(data.Marca + "Que guarda la variable"); 
 					a.find('.Marca').val(data.Marca);
+          a.find('.Serie').val(data.Serie);
+          a.find('.Responsable').val(data.Responsable);
 
 				},
 				error:function(){
@@ -271,7 +263,7 @@ $(document).on('keyup','.Serie',function () {
   
 
 
-$(document).on('keyup','.Serie',function () {
+$(document).on('keyup','.Economico',function () {
 			var prod_id=$(this).val();
 
 			var a=$(this).parent();
@@ -286,6 +278,8 @@ $(document).on('keyup','.Serie',function () {
 					console.log(" Abajo la el Modelo");
 					console.log(data.Modelo); 
 					a.find('.Modelo').val(data.Modelo);
+          a.find('.Oficina').val(data.Oficina);
+          a.find('.rpe').val(data.rpe);
 
 				},
 				error:function(){

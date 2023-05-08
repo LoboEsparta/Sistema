@@ -88,7 +88,7 @@ crossorigin="anonymous"></script>
       <td>{{ $persona -> serie}}</td>
       <td>
       <a href="{{url ('/editar/'.$persona->id.'/edit') }}">
-        Editar
+        Eliminar
       </a>
       </td>
     </tr>
@@ -122,9 +122,13 @@ crossorigin="anonymous"></script>
   <thead>
     <tr>
       <th>#</th>
+      <th>No.Economico</th>
+      <th>Responsable</th>
       <th>Marca</th>
       <th>Modelo</th>
       <th>Serie</th>
+      <th>Nombre/Agencia/Oficina</th>
+      <th>RPE</th>
       <th>Editar</th>
     </tr>
   </thead>
@@ -132,9 +136,13 @@ crossorigin="anonymous"></script>
   <tbody>
     <tr>
       <th scope="row">{{ $radio -> id}}</th>
+      <td>{{ $radio -> Economico }}</td>
+      <td>{{ $radio -> Responsable}}</td>
       <td>{{ $radio -> Marca }}</td>
       <td>{{ $radio -> Modelo}}</td>
       <td>{{ $radio -> Serie}}</td>
+      <td>{{ $radio -> Oficina}}</td>
+      <td>{{ $radio -> rpe}}</td>
       <td>
       <a href="{{url ('/editar/'.$radio->id.'/edit') }}">
         Editar

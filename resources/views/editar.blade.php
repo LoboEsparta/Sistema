@@ -311,7 +311,7 @@ ul li:hover a{
 
 <div class="container" id="contenido">
 
-<h3>Editar Información de {{ $formato -> name}}</h3>
+<h3>Editar Información Radio Serie: {{ $formato -> Serie}}</h3>
 
 
 
@@ -321,24 +321,47 @@ ul li:hover a{
 {{ method_field('PATCH') }}
 
 <div class="row">
+<div class="row">
+    <div>
+        <label for="" class="form-label">Responsable:</label>
+        <input type="text" name="Responsable" class="form-control" value="{{ $formato-> Responsable}}">
+    </div>
+</div>
+<div class="row">
+    <div>
+        <label for="" class="form-label">No.Economico:</label>
+        <input type="text" name="Economico" class="form-control" value="{{ $formato-> Economico}}">
+    </div>
+</div>
     <div>
         <label for="" class="form-label">Marca:</label>
-        <input type="text" name="marca" class="form-control" value="{{ $formato-> marca }}">
+        <input type="text" name="marca" class="form-control" value="{{ $formato-> Marca }}">
     </div>
 </div>
 <div class="row">
     <div>
         <label for="" class="form-label">Modelo:</label>
-        <input type="text" name="modelo" class="form-control" value="{{ $formato-> modelo }}">
+        <input type="text" name="modelo" class="form-control" value="{{ $formato-> Modelo }}">
     </div>
 </div>
 <div class="row">
     <div>
         <label for="" class="form-label">Serie:</label>
-        <input type="text" name="serie" class="form-control" value="{{ $formato-> serie}}">
+        <input type="text" name="serie" class="form-control" value="{{ $formato-> Serie}}">
     </div>
 </div>
-
+<div class="row">
+    <div>
+        <label for="" class="form-label">Nombre/Agencia/Oficina:</label>
+        <input type="text" name="Oficina" class="form-control" value="{{ $formato-> Oficina}}">
+    </div>
+</div>
+<div class="row">
+    <div>
+        <label for="" class="form-label">R.P.E:</label>
+        <input type="text" name="rpe" class="form-control" value="{{ $formato-> rpe}}">
+    </div>
+</div>
 <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Editar Datos</button>
 
 
