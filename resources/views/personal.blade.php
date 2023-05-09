@@ -76,7 +76,7 @@ crossorigin="anonymous"></script>
       <th>Nombre</th>
       <th>UserName</th>
       <th>R.P.E</th>
-      <th>Editar</th>
+      <th>Eliminar</th>
     </tr>
   </thead>
   @foreach ($personal as $persona)
@@ -87,9 +87,11 @@ crossorigin="anonymous"></script>
       <td>{{ $persona -> username}}</td>
       <td>{{ $persona -> serie}}</td>
       <td>
-      <a href="{{url ('/editar/'.$persona->id.'/edit') }}">
-        Eliminar
-      </a>
+        <form action="{{ url ('/editar/'.$persona->id)}}" method="post">
+          @csrf
+          {{ method_field('DELETE') }}
+        <input type="submit" onclick="return confirm('¿Quieres borrar?')" value="Eliminar" class="btn btn-danger">
+        </form>
       </td>
     </tr>
     @endforeach

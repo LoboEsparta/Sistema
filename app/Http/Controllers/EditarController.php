@@ -56,17 +56,18 @@ class EditarController extends Controller
     public function update(Request $request, $id)
     {
         $datos = request()->except(['_token','_method']);
-        User::where('id','=', $id )->update($datos);
+        radios::where('id','=', $id )->update($datos);
 
-        $formato=User::findOrFail($id);
+        $formato=radios::findOrFail($id);
         return view('editar', compact('formato')); 
         //return response()->json($datos);
     }
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(editar $editar)
+    public function destroy($id)
     {
-        //
+        User::destroy($id);
+        return redirect('personal');
     }
 }
