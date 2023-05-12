@@ -339,7 +339,7 @@ ul li:hover a{
       <h5 id="abajo">Opciones</h5>
       <div class="col">
       <div class="form-check" id="abajo">
-      <input type="text" name="Cedula" class="form-control" value="{{ $formato-> Cedula }}" disabled>
+      <input type="text" name="Cedula" class="form-control" value="{{ $formato-> Cedula }} {{ $formato-> Movil }}" disabled>
           <!--ByJesusHilarioJuarezOrtiz-->
         </div>
       </div>
@@ -350,7 +350,12 @@ ul li:hover a{
       </div>
       <div class="col">
       <div class="form-check" id="abajo">
-      <input type="text" name="UTR" class="form-control" value="{{ $formato-> UTR }}" disabled>
+      <input type="text" name="UTR" class="form-control" value="{{ $formato-> UTR }}{{ $formato-> Base}}" disabled>
+        </div>
+      </div>
+      <div class="col">
+      <div class="form-check" id="abajo">
+      <input type="text" name="Otros" class="form-control" value="{{ $formato-> Portatil }}" disabled>
         </div>
       </div>
       <div class="col">

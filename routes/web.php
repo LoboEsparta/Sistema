@@ -22,7 +22,7 @@ use App\Http\Controllers\RadiosController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 
@@ -46,6 +46,10 @@ Route::get('/radiovhf', function () {
     return view('radiovhf');
 });
 Route::resource('radiovhf', RadiovhfsController::class)->middleware('auth');
+Route::get('/radiovhf', [App\Http\Controllers\RadiovhfsController::class, 'index'])->middleware('auth');
+Route::get('/findmarca', [App\Http\Controllers\RadiovhfsController::class, 'findmarca'])->middleware('auth');
+Route::get('/findmodelo', [App\Http\Controllers\RadiovhfsController::class, 'findmodelo'])->middleware('auth');
+
 
 
 

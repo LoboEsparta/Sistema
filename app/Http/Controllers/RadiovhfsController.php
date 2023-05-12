@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\radiovhfs;
 use App\Models\radiovhfdos;
+use App\Models\User;
+use App\Models\radios;
 use Illuminate\Http\Request;
 
 class RadiovhfsController extends Controller
@@ -13,8 +15,28 @@ class RadiovhfsController extends Controller
      */
     public function index()
     {
-        return view('radiovhf');
+        $datosusuario['personal']=User::paginate();
+        $prod = radios::all();
+        //return view('radiouhf', $datosusuario,);
+        return view ('radiovhf', compact('prod','datosusuario'));
+
     }
+    
+    public function findmarca ( Request $request)
+    {
+        $p = radios::select('Marca','Serie','Responsable')->where('Economico',$request
+        ->id)->first();
+        return response()->json($p);
+    }
+
+    public function findmodelo ( Request $request)
+    {
+        $p = radios::select('Modelo','Oficina','rpe')->where('Economico',$request
+        ->id)->first();
+        return response()->json($p);
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -73,9 +95,10 @@ class RadiovhfsController extends Controller
             'area',
             'tipo',
             'fecha',
-            'Cedula',
+            'Movil',
+            'Portatil',
+            'Base',
             'Repetidor',
-            'UTR',
             'Otros',
             'Mantenimiento',
             'Ubicacion',

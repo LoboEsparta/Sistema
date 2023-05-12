@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('radiovhfdos', function (Blueprint $table) {
             $table->id();
 
-            $table->string('Tierras')->nullable();
-            $table->string('Respaldo')->nullable();
+            $table->string('Tierras');
+            $table->string('Respaldo');
 
             $table->string('Antena')->nullable();
             $table->string('tabla1')->nullable();

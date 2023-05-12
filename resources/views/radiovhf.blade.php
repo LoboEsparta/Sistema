@@ -17,7 +17,9 @@
 
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
  crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
@@ -71,7 +73,7 @@ aria-labelledby="offcanvasExampleLabel">
         <li><a class="lista" href="{{ url('radiovhf')}}">VHF Radio</a></li>
         <li><a class="lista" href="{{ url('radiouhf')}}">UHF Radio</a></li>
         <li><a class="lista" href="{{ url('principal')}}">Admin</a></li>
-        <li><a class="lista" href="#">Formato 4</a></li>
+        
       </ul>
     </div>
   </div>
@@ -109,25 +111,33 @@ aria-labelledby="offcanvasExampleLabel">
       <h5 id="abajo">Opciones</h5>
       <div class="col">
       <div class="form-check" id="abajo">
-          <input class="form-check-input" type="checkbox" value="Cedula" name="Cedula">
+          <input class="form-check-input" type="checkbox" value="Movil" name="Movil">
           <label class="form-check-label" for="Check1">
-            Cedula
+            Movil
+          </label>
+        </div>
+      </div>
+      <div class="col">
+      <div class="form-check" id="abajo">
+          <input class="form-check-input" type="checkbox" value="Portatil" name="Portatil">
+          <label class="form-check-label" for="Check2">
+            Portatil
+          </label>
+        </div>
+      </div>
+      <div class="col">
+      <div class="form-check" id="abajo">
+          <input class="form-check-input" type="checkbox" value="Base" name="Base">
+          <label class="form-check-label" for="Check3">
+            Base
           </label>
         </div>
       </div>
       <div class="col">
       <div class="form-check" id="abajo">
           <input class="form-check-input" type="checkbox" value="Repetidor" name="Repetidor">
-          <label class="form-check-label" for="Check2">
+          <label class="form-check-label" for="Check10">
             Repetidor
-          </label>
-        </div>
-      </div>
-      <div class="col">
-      <div class="form-check" id="abajo">
-          <input class="form-check-input" type="checkbox" value="UTR" name="UTR">
-          <label class="form-check-label" for="Check3">
-            UTR
           </label>
         </div>
       </div>
@@ -185,46 +195,115 @@ aria-labelledby="offcanvasExampleLabel">
       
     
 
-    <div class="row">
-      <h5>Datos</h5>
-      <div class="col">
-        <div>
-          <label for="" class="form-label">ECO/Ubicación</label>
-          <input type="text" name="Ubicacion" class="form-control" placeholder="ECO/Ubicación" required>
-        </div>
-        <div>
-          <label for="" class="form-label">Responsable</label>
-          <input type="text" name="Responsable" class="form-control" placeholder="Responsable" required>
-        </div>
-        <div>
-          <label for="" class="form-label">Nombre/Agencia/Oficina</label>
-          <input type="text" name="Oficina" class="form-control" placeholder="Nombre/Agencia/Oficina" required>
-        </div>
-        <div>
-          <label for="" class="form-label">RPE/Dirección</label>
-          <input type="text" name="Direccion" class="form-control" placeholder="RPE/Dirección" required>
-        </div>
-      </div>
-    </div>
+      
+    <Style>
+  #titulo{
+    font-size: 20px
+  }
+  #marco{
+    border: .5px;
+    border-style: solid;
+    border-color: rgb(223 223 223);
+  }
+</Style>
 
-    <div class="row text-center" id="bordes">          
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th scope="col">Serie</th>
-          <th scope="col">Marca</th>
-          <th scope="col">Modelo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input type="text" name="Serie" id="cuadro" placeholder="Serie" required></td>
-          <td><input type="text" name="Marca" id="cuadro" placeholder="Marca" required></td>
-          <td><input type="text" name="Modelo" id="cuadro" placeholder="Modelo" required></td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
+<div class="row text-center">
+<h5>Datos</h5>
+<span>Realiza tu busqueda por el numero Economico y espera 5 segundos mientras se hace tu busqueda</span><br>
+</div>
+
+<div class="row text-center" id="marco">
+  
+  <div class="col">
+  <br>
+  <label for="" class="form-label" id="titulo" >ECO/Ubicación:</label>
+          <!--ByJesusHilarioJuarezOrtiz-->
+          <input type="text" name="Ubicacion" class="Economico form-control" placeholder="ECO/Ubicación" required><br>
+          <label for="" id="titulo" class="form-label">Responsable del equipo:</label>
+          <input type="text" name="Responsable" class="Responsable form-control" readonly placeholder="Responsable" required>
+          <label for="" id="titulo" class="form-label">Nombre/Agencia/Oficina:</label>
+          <input type="text" name="Oficina" class="Oficina form-control" readonly placeholder="Nombre/Agencia/Oficina" required>
+          <label for="" id="titulo" class="form-label">RPE/Dirección:</label>
+          <input type="text" name="Direccion" class="rpe form-control" readonly placeholder="RPE/Dirección" required>
+        
+<br>
+    <span id="titulo"> Serie: </span>
+    <input class="Serie" style="width: 250px" name="Serie" readonly placeholder="Escribe aqui el numero de Serie" id="cuadro">
+
+    <span id="titulo"> Marca: </span>
+    <input class="Marca" style="width: 250px" name="Marca" readonly placeholder="Marca" id="cuadro">
+
+    <span id="titulo"> Modelo: </span>
+    <input class="Modelo" style="width: 250px" name="Modelo" readonly placeholder="Modelo" id="cuadro"><br>
+
+<br>
+
+</div>
+</div>
+
+
+    <script type="text/javascript">
+
+$(document).on('keyup','.Economico',function () {
+			var prod_id=$(this).val();
+
+			var a=$(this).parent();
+			console.log(prod_id + " Prueba de marca");
+			var op="";
+			$.ajax({
+				type:'get',
+				url:'{!!URL::to('findmarca')!!}',
+				data:{'id':prod_id},
+				dataType:'json',
+				success:function(data){
+					console.log(" Abajo la marca");
+					console.log(data.Marca + "Que guarda la variable"); 
+					a.find('.Marca').val(data.Marca);
+          a.find('.Serie').val(data.Serie);
+          a.find('.Responsable').val(data.Responsable);
+
+				},
+				error:function(){
+
+				}
+			});
+    });
+
+
+  
+
+
+$(document).on('keyup','.Economico',function () {
+			var prod_id=$(this).val();
+
+			var a=$(this).parent();
+			console.log(prod_id + " Prueba de modelo");
+			var op="";
+			$.ajax({
+				type:'get',
+				url:'{!!URL::to('findmodelo')!!}',
+				data:{'id':prod_id},
+				dataType:'json',
+				success:function(data){
+					console.log(" Abajo la el Modelo");
+					console.log(data.Modelo); 
+					a.find('.Modelo').val(data.Modelo);
+          a.find('.Oficina').val(data.Oficina);
+          a.find('.rpe').val(data.rpe);
+
+				},
+				error:function(){
+
+				}
+			});
+    });
+
+
+
+
+</script>
+
+    
 
     <div class="row">
      <div class="col">
