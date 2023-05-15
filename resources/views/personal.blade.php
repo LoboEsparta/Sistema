@@ -132,6 +132,7 @@ crossorigin="anonymous"></script>
       <th>Nombre/Agencia/Oficina</th>
       <th>RPE</th>
       <th>Editar</th>
+      <th>Eliminar</th>
     </tr>
   </thead>
   @foreach ($radios as $radio)
@@ -149,6 +150,13 @@ crossorigin="anonymous"></script>
       <a href="{{url ('/editar/'.$radio->id.'/edit') }}">
         Editar
       </a>
+      </td>
+      <td>
+        <form action="{{ url ('/personal/'.$radio->id)}}" method="post">
+          @csrf
+          {{ method_field('DELETE') }}
+        <input type="submit" onclick="return confirm('¿Quieres borrar?')" value="Eliminar" class="btn btn-danger">
+        </form>
       </td>
     </tr>
     @endforeach

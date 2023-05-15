@@ -70,8 +70,9 @@ class PersonalsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(personals $personals)
+    public function destroy($id)
     {
-        //
+        radios::destroy($id);
+        return redirect('personal');
     }
 }

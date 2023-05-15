@@ -71,7 +71,6 @@ Route::get('/personal', function () {
 Route::resource('personal', PersonalsController::class)->middleware('auth');
 Route::get('/personal', [App\Http\Controllers\PersonalsController::class, 'index'])->middleware('can:personal') ->name('personal');
 
-
 Route::get('/editar', function () {
     return view('editar');
 });
