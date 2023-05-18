@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="public/build/assets/">
         <script src="build/assets/app-4c85f5d2.js"></script>
         <link rel="stylesheet" href="build/assets/app.css">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
         <title>Radio UHF</title>
 
@@ -617,15 +618,15 @@ $(document).on('keyup','.Economico',function () {
     <h5>En caso de utilizar evidencia fotografica saque las fotografias y despues seleccione sus archivo</h5>
       <h5>***Solo se puede enviar hasta 3 fotografias***</h5>
         <div class="col">
-        <input type="file" class="form-control" aria-describedby="inputGroupFileAddon04" 
+        <input type="file" accept="image/*" class="form-control" aria-describedby="inputGroupFileAddon04" 
   aria-label="Upload" name="Foto" id="Foto">
         </div>  
         <div class="col">
-        <input type="file" class="form-control" aria-describedby="inputGroupFileAddon04" 
+        <input type="file" accept="image/*" class="form-control" aria-describedby="inputGroupFileAddon04" 
   aria-label="Upload" name="Fotodos" id="Fotodos">
         </div>
         <div class="col">
-        <input type="file" class="form-control" aria-describedby="inputGroupFileAddon04" 
+        <input type="file" accept="image/*" class="form-control" aria-describedby="inputGroupFileAddon04" 
   aria-label="Upload" name="Fototres" id="Fototres">
         </div>
       </div>
