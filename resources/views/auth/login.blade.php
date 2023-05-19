@@ -13,7 +13,7 @@ crossorigin="anonymous"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="sistema-uku9u.ondigitalocean.app/build/assets/login.css">
+<!--<link rel="stylesheet" href="build/assets/login.css">-->
         <title>Departamento comunicaciones</title>
         <script src="build/assets/app-4c85f5d2.js"></script>
         <link rel="stylesheet" href="build/assets/app.css">
